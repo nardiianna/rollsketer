@@ -4213,3 +4213,23 @@ product-recommendations:has([data-has-recommendations='false']) {
     translate: 0px var(--atc-destination, 0px);
   }
 }
+
+/* ── Globo Product Options — theme integration ─────────────────────────────── */
+.gpo-app .gpo-group__wrapper,
+.gpo-group__wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.gpo-app .gpo-select,
+.gpo-app .gpo-select select {
+  border-radius: var(--style-border-radius-buttons-primary) !important;
+  background-color: var(--color-input-background) !important;
+  border-color: var(--color-input-border) !important;
+}
+
+.gpo-app .gpo-select {
+  overflow: hidden;
+}
+

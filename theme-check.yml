@@ -1,0 +1,195 @@
+# GitHub Actions: CI quality gates per tema Shopify cliente
+#
+# Differenze vs versione Theme Store:
+# - Soglie Lighthouse più alte (target Syfer interno P≥70 vs Theme Store 60)
+# - Scan anti-pattern non blocca su riferimenti "Syfer" (ammessi nei progetti cliente)
+# - Niente verifica nome tema / restrizioni naming
+#
+# Riferimenti:
+# - CLAUDE.md §9 (performance target Syfer)
+# - CLAUDE.md §10 (a11y target Syfer)
+# - docs/checklist-template.md F+G (soglie)
+#
+# Secret richiesti (Settings → Secrets and variables → Actions):
+# - SHOPIFY_CLI_THEME_TOKEN  (token Theme Access app per il dev store cliente)
+# - SHOPIFY_FLAG_STORE       (es. "<cliente>-dev.myshopify.com")
+# - LHCI_GITHUB_APP_TOKEN    (opzionale, commenti automatici PR di Lighthouse CI)
+
+name: Theme CI (Client)
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────
+  # JOB 1: Theme Check
+  # ─────────────────────────────────────────────────────────────────────
+  theme-check:
+    name: Shopify Theme Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli @shopify/theme
+
+      - name: Run Theme Check
+        run: shopify theme check --fail-level=error
+
+  # ─────────────────────────────────────────────────────────────────────
+  # JOB 2: Prettier
+  # ─────────────────────────────────────────────────────────────────────
+  prettier:
+    name: Prettier — formato Liquid
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npx prettier --check '**/*.liquid' '**/*.json' '**/*.css' '**/*.js'
+
+  # ─────────────────────────────────────────────────────────────────────
+  # JOB 3: HTML validate
+  # ─────────────────────────────────────────────────────────────────────
+  html-validate:
+    name: HTML validate
+    runs-on: ubuntu-latest
+    needs: theme-check
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+
+      - name: Push tema su preview store
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_FLAG_STORE }}
+        run: |
+          npm install -g @shopify/cli @shopify/theme
+          shopify theme push --unpublished --json > theme-push.json
+          echo "PREVIEW_URL=$(cat theme-push.json | jq -r '.theme.preview_url')" >> $GITHUB_ENV
+
+      - name: Scarica HTML pagine chiave
+        run: |
+          mkdir -p .ci/html
+          for path in "" "/collections/all" "/products/sample" "/cart" "/search?q=test" "/404"; do
+            slug=$(echo "${path}" | tr '/' '-' | tr '?' '-' | sed 's/^-//;s/-$//')
+            slug=${slug:-home}
+            curl -sL "${PREVIEW_URL}${path}" -o ".ci/html/${slug}.html"
+          done
+
+      - run: npx html-validate '.ci/html/*.html'
+
+  # ─────────────────────────────────────────────────────────────────────
+  # JOB 4: Lighthouse CI
+  # ─────────────────────────────────────────────────────────────────────
+  # Soglie Syfer: P ≥ 70, A ≥ 90, BP ≥ 90, SEO ≥ 90
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    needs: theme-check
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: |
+          npm ci
+          npm install -g @shopify/cli @shopify/theme @lhci/cli
+
+      - name: Push tema su preview store
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_FLAG_STORE }}
+        run: |
+          shopify theme push --unpublished --json > theme-push.json
+          echo "PREVIEW_URL=$(cat theme-push.json | jq -r '.theme.preview_url')" >> $GITHUB_ENV
+
+      - name: Run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: lhci autorun --config=.lighthouserc.json
+
+  # ─────────────────────────────────────────────────────────────────────
+  # JOB 5: Anti-pattern scan (rilassato)
+  # ─────────────────────────────────────────────────────────────────────
+  # Solo i blocker tecnici. Riferimenti "Syfer" ammessi nei progetti cliente.
+  anti-pattern-scan:
+    name: Scan anti-pattern (tecnici)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verifica niente localStorage / sessionStorage per stato cart
+        run: |
+          if grep -rn "localStorage\|sessionStorage" assets/ 2>/dev/null | grep -v "// allowed:" ; then
+            echo "::error::Trovati riferimenti a localStorage/sessionStorage non taggati. Vedi CLAUDE.md §13. Se intenzionale per persistenza non-cart, aggiungi commento '// allowed: <motivo>'."
+            exit 1
+          fi
+
+      - name: Verifica niente jQuery
+        run: |
+          if grep -rn 'jQuery\|\$(' assets/ 2>/dev/null; then
+            echo "::error::Trovati riferimenti a jQuery. CLAUDE.md §13."
+            exit 1
+          fi
+
+      - name: Verifica niente stili inline
+        run: |
+          if grep -rn 'style="' sections/ snippets/ layout/ 2>/dev/null; then
+            echo "::error::Trovati attributi style inline. Usa classe + CSS variabile."
+            exit 1
+          fi
+
+      - name: Verifica niente file Sass
+        run: |
+          if find . -name "*.scss" -o -name "*.scss.liquid" 2>/dev/null | grep -q .; then
+            echo "::error::Trovati file Sass. Usa solo CSS nativo."
+            exit 1
+          fi
+
+      - name: Verifica niente credenziali hardcoded
+        run: |
+          # Pattern: chiavi API plausibili (32+ caratteri esadecimali, o token-like)
+          if grep -rEn '(api[_-]?key|apikey|secret|password|token)\s*[:=]\s*["\047][A-Za-z0-9_\-]{20,}' . --include="*.liquid" --include="*.js" --include="*.json" 2>/dev/null | grep -v "// example:" | grep -v "settings_schema.json"; then
+            echo "::warning::Possibili credenziali hardcoded. Verifica e sposta in shop.metafields o Shopify Functions env."
+          fi
+
+      - name: Verifica niente Lorem Ipsum
+        run: |
+          if grep -ri "lorem ipsum" . --exclude-dir=node_modules --exclude-dir=.git --include="*.liquid" --include="*.json" 2>/dev/null; then
+            echo "::warning::Trovato Lorem Ipsum. Sostituire con copy reale prima del go-live."
+          fi
+
+  # ─────────────────────────────────────────────────────────────────────
+  # JOB 6: Gate finale
+  # ─────────────────────────────────────────────────────────────────────
+  ci-passed:
+    name: CI passed (required)
+    runs-on: ubuntu-latest
+    needs: [theme-check, prettier, html-validate, lighthouse, anti-pattern-scan]
+    steps:
+      - run: echo "Tutti i check CI passati. PR mergeable."
