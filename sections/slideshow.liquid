@@ -131,6 +131,15 @@
       .slideshow--with-hints--mobile-with-hints slideshow-slides {
         gap: min(var(--slideshow-gap, 0), 10px);
       }
+
+      /* Reduce slide height on mobile for landscape banner images */
+      .slideshow-section.section--height-large {
+        --section-min-height: 56vw;
+      }
+
+      .slideshow-section.section--height-medium {
+        --section-min-height: 45vw;
+      }
     }
 
     @media screen and (min-width: 750px) {

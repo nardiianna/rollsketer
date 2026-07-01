@@ -80,6 +80,14 @@
   </div>
 </div>
 
+{% stylesheet %}
+  @media screen and (max-width: 749px) {
+    [data-testid="product-list"] .product__pickup-availabilities {
+      display: none;
+    }
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "t:names.product_list",

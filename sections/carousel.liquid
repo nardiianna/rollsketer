@@ -21,6 +21,15 @@
   {% content_for 'block', type: '_carousel-content', id: 'static-carousel-content', closest.product: null %}
 </div>
 
+{% stylesheet %}
+  @media screen and (max-width: 749px) {
+    #shopify-section-carousel_PjpNTU .section-carousel {
+      --padding-block-start: 24px !important;
+      --padding-block-end: 24px !important;
+    }
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "t:names.carousel",

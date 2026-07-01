@@ -666,8 +666,8 @@
         "horizontal_alignment": "center",
         "gap": 44,
         "color_scheme": "scheme-6",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "carousel_N96xTR": {
@@ -1112,8 +1112,8 @@
         "color_scheme": "scheme-2",
         "icons_style": "arrow",
         "icons_shape": "none",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "collection_list_4jqd8z": {
@@ -1163,6 +1163,7 @@
             "text_zNzyWB": {
               "type": "text",
               "name": "t:names.text",
+              "disabled": true,
               "settings": {
                 "text": "<h3>Shop by collection</h3>",
                 "width": "fit-content",
@@ -1268,7 +1269,7 @@
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "columns": 3,
-        "mobile_columns": "2",
+        "mobile_columns": "1",
         "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "bento_gap": 8,
@@ -1279,8 +1280,8 @@
         "section_width": "page-width",
         "gap": 12,
         "color_scheme": "scheme-2",
-        "padding-block-start": 48,
-        "padding-block-end": 48,
+        "padding-block-start": 64,
+        "padding-block-end": 64,
         "extra_card_enabled": true,
         "extra_card_title": "Pattinaggio su ghiaccio",
         "extra_card_url": "https://iceskater.it/",
@@ -1389,8 +1390,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-start": 64,
+        "padding-block-end": 32
       }
     },
     "section_DBfPUL": {
@@ -1877,8 +1878,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "divider_fRegqR": {
@@ -1891,8 +1892,8 @@
         "corner_radius": "square",
         "width_percent": 100,
         "alignment_horizontal": "center",
-        "padding-block-start": 16,
-        "padding-block-end": 16
+        "padding-block-start": 24,
+        "padding-block-end": 24
       }
     },
     "carousel_PjpNTU": {
@@ -2022,7 +2023,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/33_bfecafbf-7c27-4550-9a17-22e08f8dbe14.png",
-                    "link": "",
+                    "link": "shopify://collections/komplex",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -2134,7 +2135,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/34.png",
-                    "link": "",
+                    "link": "shopify://collections/r1",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -2246,7 +2247,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/35.png",
-                    "link": "",
+                    "link": "shopify://collections/tvd",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -2358,7 +2359,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/38.png",
-                    "link": "",
+                    "link": "shopify://collections/edea",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -2470,7 +2471,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/36.png",
-                    "link": "",
+                    "link": "shopify://collections/toor",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -2582,7 +2583,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/38_8427dd0e-c366-4a3d-941e-767308730828.png",
-                    "link": "",
+                    "link": "shopify://collections/zuca",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -2694,7 +2695,7 @@
                   "name": "t:names.image",
                   "settings": {
                     "image": "shopify://shop_images/39_60cf4452-75c2-45b3-b82b-9f00d34e6638.png",
-                    "link": "",
+                    "link": "shopify://collections/boiani-sport",
                     "image_ratio": "adapt",
                     "width": "fill",
                     "custom_width": 100,
@@ -2794,8 +2795,8 @@
         "color_scheme": "",
         "icons_style": "chevron",
         "icons_shape": "none",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "featured_product_information_EiC9dy": {
@@ -2900,7 +2901,7 @@
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "rte",
+                    "type_preset": "h3",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
@@ -2925,7 +2926,7 @@
                     "show_sale_price_first": true,
                     "show_installments": true,
                     "show_tax_info": true,
-                    "type_preset": "",
+                    "type_preset": "h4",
                     "width": "100%",
                     "alignment": "left",
                     "font": "var(--font-body--family)",
@@ -3028,8 +3029,8 @@
         "limit_details_width": false,
         "gap": 48,
         "color_scheme": "scheme-2",
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "product_recommendations_ycqeYf": {
@@ -3102,7 +3103,7 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "paragraph",
+                "type_preset": "h5",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -3127,7 +3128,7 @@
                 "show_sale_price_first": true,
                 "show_installments": false,
                 "show_tax_info": false,
-                "type_preset": "h6",
+                "type_preset": "h5",
                 "width": "100%",
                 "alignment": "left",
                 "font": "var(--font-body--family)",
@@ -3207,8 +3208,8 @@
         "section_width": "page-width",
         "gap": 44,
         "color_scheme": "scheme-2",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "hero_FAe8Q3": {
@@ -3315,8 +3316,8 @@
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "section_GLgDMa": {
@@ -3342,8 +3343,8 @@
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-start": 8,
+            "padding-inline-end": 8
           },
           "blocks": {}
         },
@@ -3392,8 +3393,8 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 44,
-        "section_width": "full-width",
+        "gap": 24,
+        "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "scheme-1",
@@ -3408,8 +3409,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 32,
-        "padding-block-end": 32
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "section_PCVAJJ": {
@@ -3522,8 +3523,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     }
   },

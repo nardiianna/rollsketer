@@ -76,6 +76,14 @@
   </div>
 </results-list>
 
+{% stylesheet %}
+  @media screen and (max-width: 749px) {
+    .product-grid {
+      column-gap: 8px;
+    }
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "t:names.collection_container",

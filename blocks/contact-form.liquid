@@ -114,7 +114,7 @@
       {{- 'blocks.contact_form.comment' | t -}}
     </label>
     <textarea
-      rows="10"
+      rows="6"
       id="ContactForm-body"
       class="contact-form__input contact-form__input--textarea"
       name="contact[body]"
@@ -160,6 +160,10 @@
   .contact-form__input--textarea {
     resize: vertical;
     min-height: var(--input-textarea-min-height);
+
+    @media screen and (max-width: 749px) {
+      min-height: 120px;
+    }
   }
 
   .contact-form__error,

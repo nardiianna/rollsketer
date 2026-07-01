@@ -347,11 +347,11 @@
         "desktop_media_position": "left",
         "equal_columns": false,
         "limit_details_width": false,
-        "gap": 48,
+        "gap": 32,
         "enable_sticky_add_to_cart": true,
         "color_scheme": "",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 32
       }
     },
     "product_recommendations_qggXJq": {
@@ -361,7 +361,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like </h3>",
+            "text": "<h3>Ti potrebbe piacere</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
