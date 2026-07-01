@@ -166,6 +166,7 @@
     "taxes_included": "Mokesčiai įtraukti.",
     "product_badge_sold_out": "Išparduota",
     "product_badge_sale": "Išpardavimas",
+    "product_badge_tax_at_checkout": "PVM skaičiuojamas pirkimo metu",
     "search_input_label": "Ieškoti",
     "search_input_placeholder": "Ieškoti",
     "search_results": "Paieškos rezultatai",

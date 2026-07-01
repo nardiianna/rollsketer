@@ -164,6 +164,7 @@
     "taxes_included": "Porezi su uključeni.",
     "product_badge_sold_out": "Rasprodano",
     "product_badge_sale": "Sniženje",
+    "product_badge_tax_at_checkout": "PDV se obračunava pri plaćanju",
     "search_input_label": "Traži",
     "search_input_placeholder": "Pretraživanje",
     "search_results": "Rezultati pretraživanja",

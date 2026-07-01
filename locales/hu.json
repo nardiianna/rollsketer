@@ -162,6 +162,7 @@
     "taxes_included": "Tartalmazza az adókat.",
     "product_badge_sold_out": "Elfogyott",
     "product_badge_sale": "Akciós",
+    "product_badge_tax_at_checkout": "Az ÁFA a pénztárnál kerül kiszámításra",
     "grid_view": {
       "default_view": "Alapértelmezett",
       "grid_fieldset": "Oszloprács",

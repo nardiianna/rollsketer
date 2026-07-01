@@ -162,6 +162,7 @@
     "taxes_included": "已含税费。",
     "product_badge_sold_out": "售罄",
     "product_badge_sale": "促销",
+    "product_badge_tax_at_checkout": "增值税在结账时计算",
     "grid_view": {
       "default_view": "默认",
       "grid_fieldset": "列网格",

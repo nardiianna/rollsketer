@@ -53,6 +53,12 @@
     show_sale_price_first: block_settings.show_sale_price_first
   %}
 
+  {%- unless cart.taxes_included -%}
+    <p class="product-price__tax-notice">
+      {{- 'content.product_badge_tax_at_checkout' | t -}}
+    </p>
+  {%- endunless -%}
+
   {% if block_settings.show_tax_info %}
     <div class="tax-note">
       {%- if cart.duties_included and cart.taxes_included -%}

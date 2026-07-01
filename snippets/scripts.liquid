@@ -71,6 +71,15 @@
 >
 
 {% if template.name == 'collection' or template.name == 'search' %}
+  <script>
+    (function () {
+      var url = new URL(window.location.href);
+      if (!url.searchParams.has('filter.v.availability')) {
+        url.searchParams.set('filter.v.availability', '1');
+        window.location.replace(url.toString());
+      }
+    })();
+  </script>
   <link
     rel="modulepreload"
     href="{{ 'paginated-list-aspect-ratio.js' | asset_url }}"

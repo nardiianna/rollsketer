@@ -229,6 +229,7 @@
     "product_total": "Product total",
     "product_badge_sold_out": "Sold out",
     "product_badge_sale": "Sale",
+    "product_badge_tax_at_checkout": "VAT calculated at checkout",
     "product_card_placeholder": "Product title",
     "placeholder_image": "Placeholder image",
     "quantity": "Quantity",

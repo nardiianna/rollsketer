@@ -166,6 +166,7 @@
     "taxes_included": "Налоги включены.",
     "product_badge_sold_out": "Распродано",
     "product_badge_sale": "Распродажа",
+    "product_badge_tax_at_checkout": "НДС рассчитывается при оформлении заказа",
     "search_input_label": "Поиск",
     "search_input_placeholder": "Поиск",
     "search_results": "Результаты поиска",

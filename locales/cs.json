@@ -166,6 +166,7 @@
     "taxes_included": "Včetně daní.",
     "product_badge_sold_out": "Vyprodáno",
     "product_badge_sale": "Výprodej",
+    "product_badge_tax_at_checkout": "DPH vypočtena při pokladně",
     "search_input_label": "Začněte hledat",
     "search_input_placeholder": "Vyhledat",
     "search_results": "Výsledky hledání",

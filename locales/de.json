@@ -162,6 +162,7 @@
     "taxes_included": "Inkl. Steuern.",
     "product_badge_sold_out": "Ausverkauft",
     "product_badge_sale": "Sale",
+    "product_badge_tax_at_checkout": "MwSt. wird an der Kasse berechnet",
     "search_input_label": "Suchen",
     "search_input_placeholder": "Suchen",
     "search_results": "Suchergebnisse",
