@@ -479,6 +479,7 @@
     "custom_liquid": "Code Liquid",
     "default": "Par défaut",
     "default_logo": "Logo par défaut",
+    "default_message": "Message par défaut",
     "divider_width": "Largeur du séparateur",
     "headings": "Titres",
     "hide_logo_on_home_page": "Masquer le logo sur la page d'accueil",

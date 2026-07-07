@@ -191,24 +191,41 @@
               },
               "blocks": {}
             },
-            "button_dfAcDc": {
-              "type": "button",
+            "contact_form_servizi": {
+              "type": "contact-form",
               "settings": {
-                "label": "CONTATTACI",
-                "link": "shopify://pages/contact",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
+                "default_message": "Buongiorno, richiedo il servizio montaggio telaio",
+                "width": "custom",
                 "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
+                "width_mobile": "custom",
+                "custom_width_mobile": 100,
+                "inherit_color_scheme": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "submit-button": {
+                  "type": "contact-form-submit-button",
+                  "static": true,
+                  "settings": {
+                    "label": "Invia",
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "custom",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
             }
           },
           "block_order": [
             "text_6HYhfz",
-            "button_dfAcDc"
+            "contact_form_servizi"
           ]
         }
       },

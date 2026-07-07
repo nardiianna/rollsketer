@@ -356,5 +356,11 @@
       "default_title": "Titlu implicit",
       "sticky_add_to_cart": "Bara de adăugare rapidă în coș"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Echipa noastră este aici pentru a ajuta. Contactați-ne și vă vom răspunde cât mai curând posibil.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Trimite"
   }
 }

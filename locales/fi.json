@@ -349,5 +349,11 @@
       "success_moderated": "Kommentti on julkaistu; odotetaan moderointia",
       "success": "Kommentti on julkaistu"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Tiimimme auttaa mielellään. Ota yhteyttä, niin vastaamme mahdollisimman pian.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Lähetä"
   }
 }

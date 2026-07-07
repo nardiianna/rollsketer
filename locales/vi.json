@@ -349,5 +349,11 @@
       "default_title": "Tiêu đề mặc định",
       "sticky_add_to_cart": "Thanh thêm nhanh vào giỏ hàng"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Đội ngũ của chúng tôi luôn sẵn sàng hỗ trợ. Hãy liên hệ và chúng tôi sẽ phản hồi sớm nhất có thể.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Gửi"
   }
 }

@@ -349,5 +349,11 @@
       "default_title": "預設標題",
       "sticky_add_to_cart": "快速加入購物車列"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>我们的团隊隨時為您提供協助。請聯絡我们，我们会尽快回覆。</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "提交"
   }
 }

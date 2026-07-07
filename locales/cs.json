@@ -363,5 +363,11 @@
       "success_moderated": "Komentář odeslán, čeká na schválení",
       "success": "Komentář zveřejněn"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Náš tým je tu, aby vám pomohl. Ozvěte se nám a co nejdříve se vám ozveme.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Odeslat"
   }
 }

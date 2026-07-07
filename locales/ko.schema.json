@@ -479,6 +479,7 @@
     "custom_liquid": "Liquid 코드",
     "default": "기본값",
     "default_logo": "기본 로고",
+    "default_message": "기본 메시지",
     "divider_width": "구분선 너비",
     "headings": "제목",
     "horizontal_padding": "가로 패딩",

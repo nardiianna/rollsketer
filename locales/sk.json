@@ -363,5 +363,11 @@
       "default_title": "Predvolený názov",
       "sticky_add_to_cart": "Panel rýchleho pridania do košíka"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Náš tím je tu, aby pomohol. Kontaktujte nás a čo najskôr sa vám ozveme.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Odoslať"
   }
 }

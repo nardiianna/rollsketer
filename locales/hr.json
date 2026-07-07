@@ -356,5 +356,11 @@
       "success_moderated": "Komentar je objavljen, čeka moderiranje",
       "success": "Komentar objavljen"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Naš tim je tu da pomogne. Javite nam se i odgovorit ćemo što je prije moguće.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Pošalji"
   }
 }

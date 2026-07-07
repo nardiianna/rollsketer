@@ -349,5 +349,11 @@
       "success_moderated": "Kommentaren blev indsendt og afventer moderering",
       "success": "Kommentaren blev indsendt"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Vores team er her for at hjælpe. Kontakt os, så svarer vi hurtigst muligt.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Send"
   }
 }

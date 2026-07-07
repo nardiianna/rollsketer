@@ -479,6 +479,7 @@
     "custom_liquid": "Liquid-Code",
     "default": "Standard",
     "default_logo": "Standard-Logo",
+    "default_message": "Standardnachricht",
     "divider_width": "Breite der Trennlinie",
     "hide_logo_on_home_page": "Logo auf der Startseite ausblenden",
     "horizontal_padding": "Horizontales Padding",

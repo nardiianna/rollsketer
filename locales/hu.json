@@ -349,5 +349,11 @@
       "default_title": "Alapértelmezett cím",
       "sticky_add_to_cart": "Gyors hozzáadás a kosárhoz sáv"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Csapatunk készséggel segít. Vegye fel velünk a kapcsolatot, és a lehető leghamarabb válaszolunk.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Küldés"
   }
 }

@@ -349,5 +349,11 @@
       "default_title": "Standardtittel",
       "sticky_add_to_cart": "Hurtiglinje for «Legg i handlekurv»"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Teamet vårt er her for å hjelpe. Ta kontakt, så svarer vi så snart som mulig.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Send"
   }
 }

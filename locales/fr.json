@@ -356,5 +356,11 @@
       "success_moderated": "Commentaire publié, en attente de modération",
       "success": "Commentaire publié"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Notre équipe est là pour vous aider. Contactez-nous et nous vous répondrons dès que possible.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Envoyer"
   }
 }

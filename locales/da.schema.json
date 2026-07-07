@@ -481,6 +481,7 @@
     "custom_liquid": "Liquid-kode",
     "default": "Standard",
     "default_logo": "Standardlogo",
+    "default_message": "Standardbesked",
     "divider_width": "Bredde på skillelinje",
     "headings": "Overskrifter",
     "horizontal_padding": "Vandret udfyldning",

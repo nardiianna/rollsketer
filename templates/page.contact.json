@@ -749,6 +749,7 @@
         "contact_form_UwiCkQ": {
           "type": "contact-form",
           "settings": {
+            "default_message": "",
             "width": "custom",
             "custom_width": 50,
             "width_mobile": "custom",

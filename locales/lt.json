@@ -363,5 +363,11 @@
       "default_title": "Numatytasis pavadinimas",
       "sticky_add_to_cart": "Greito pridėjimo į krepšelį juosta"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Mūsų komanda pasiruošusi padėti. Susisiekite su mumis ir atsakysime kuo greičiau.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Siųsti"
   }
 }

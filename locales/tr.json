@@ -349,5 +349,11 @@
       "default_title": "Varsayılan Başlık",
       "sticky_add_to_cart": "Sepete hızlı ekle çubuğu"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Ekibimiz yardımcı olmak için burada. Bize ulaşın, en kısa sürede yanıt verelim.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Gönder"
   }
 }

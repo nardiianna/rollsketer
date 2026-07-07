@@ -479,6 +479,7 @@
     "custom_liquid": "Código Liquid",
     "default": "Predefinido",
     "default_logo": "Logótipo predefinido",
+    "default_message": "Mensagem predefinida",
     "divider_width": "Largura do divisor",
     "headings": "Títulos",
     "hide_logo_on_home_page": "Ocultar logótipo na página inicial",

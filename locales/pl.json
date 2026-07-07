@@ -363,5 +363,11 @@
       "default_title": "Tytuł domyślny",
       "sticky_add_to_cart": "Pasek szybkiego dodawania do koszyka"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Nasz zespół chętnie pomoże. Skontaktuj się z nami, a odpowiemy najszybciej jak to możliwe.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Wyślij"
   }
 }

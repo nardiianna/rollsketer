@@ -349,5 +349,11 @@
       "success_moderated": "コメントを投稿しました。承認待ちです",
       "success": "コメントを投稿しました"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>私たちのチームがサポートいたします。お問い合わせいただければ、できるだけ早くご返信いたします。</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "送信"
   }
 }

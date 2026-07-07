@@ -349,5 +349,11 @@
       "success_moderated": "评论已发布，等待审核",
       "success": "评论已发布"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>我们的团队随时为您提供帮助。请联系我们，我们会尽快回复。</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "提交"
   }
 }

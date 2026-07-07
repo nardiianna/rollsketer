@@ -349,5 +349,11 @@
       "default_title": "Standardtitel",
       "sticky_add_to_cart": "Fält för att lägga till snabbt i varukorgen"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Vårt team hjälper gärna till. Kontakta oss så svarar vi så snart som möjligt.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Skicka"
   }
 }

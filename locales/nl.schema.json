@@ -482,6 +482,7 @@
     "custom_liquid": "Liquid-code",
     "default": "Standaard",
     "default_logo": "Standaardlogo",
+    "default_message": "Standaardbericht",
     "divider_width": "Breedte scheidingslijn",
     "horizontal_padding": "Horizontale padding",
     "inverse": "Invers",

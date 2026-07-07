@@ -479,6 +479,7 @@
     "custom_liquid": "Liquid 程式碼",
     "default": "預設",
     "default_logo": "預設標誌",
+    "default_message": "預設訊息",
     "divider_width": "分隔線寬度",
     "headings": "標題",
     "hide_logo_on_home_page": "在首頁隱藏標誌",

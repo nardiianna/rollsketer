@@ -481,6 +481,7 @@
     "custom_liquid": "โค้ด Liquid",
     "default": "ค่าเริ่มต้น",
     "default_logo": "โลโก้เริ่มต้น",
+    "default_message": "ข้อความเริ่มต้น",
     "divider_width": "ความกว้างของเส้นแบ่ง",
     "hide_logo_on_home_page": "ซ่อนโลโก้บนหน้าแรก",
     "horizontal_padding": "การเว้นขอบด้านในแนวนอน",

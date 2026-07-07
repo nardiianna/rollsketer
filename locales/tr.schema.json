@@ -483,6 +483,7 @@
     "custom_liquid": "Liquid kodu",
     "default": "Varsayılan",
     "default_logo": "Varsayılan logo",
+    "default_message": "Varsayılan mesaj",
     "divider_width": "Ayırıcı genişliği",
     "hide_logo_on_home_page": "Logoyu ana sayfada gizle",
     "inverse": "Ters",

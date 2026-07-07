@@ -482,6 +482,7 @@
     "custom_liquid": "Código Liquid",
     "default": "Padrão",
     "default_logo": "Logo padrão",
+    "default_message": "Mensagem padrão",
     "divider_width": "Largura do divisor",
     "horizontal_padding": "Preenchimento horizontal",
     "inverse": "Inverso",

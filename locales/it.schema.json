@@ -485,6 +485,7 @@
     "custom_liquid": "Codice Liquid",
     "default": "Predefinito",
     "default_logo": "Logo predefinito",
+    "default_message": "Messaggio predefinito",
     "divider_width": "Larghezza divisore",
     "hide_logo_on_home_page": "Nascondi logo sulla homepage",
     "inverse": "Inverso",

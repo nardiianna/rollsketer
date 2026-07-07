@@ -356,5 +356,11 @@
       "default_title": "Titolo predefinito",
       "sticky_add_to_cart": "Barra per l'aggiunta rapida al carrello"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Il nostro team è a disposizione per aiutarti. Contattaci e ti risponderemo il prima possibile.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Invia"
   }
 }

@@ -349,5 +349,11 @@
       "default_title": "Standaardtitel",
       "sticky_add_to_cart": "Balk voor snel toevoegen aan winkelwagen"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Ons team staat voor je klaar. Neem contact op en we reageren zo snel mogelijk.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Verzenden"
   }
 }

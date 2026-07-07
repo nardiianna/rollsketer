@@ -482,6 +482,7 @@
     "custom_liquid": "Liquid-koodi",
     "default": "Oletus",
     "default_logo": "Oletuslogo",
+    "default_message": "Oletusviesti",
     "divider_width": "Erottimen leveys",
     "headings": "Otsikot",
     "horizontal_padding": "Vaakasuuntainen reunatäyte",

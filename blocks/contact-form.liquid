@@ -120,7 +120,7 @@
       name="contact[body]"
       placeholder="{{ 'blocks.contact_form.comment' | t }}"
     >
-      {{- form.body -}}
+      {{- form.body | default: block.settings.default_message -}}
     </textarea>
 
     {{ submit_button }}
@@ -179,6 +179,12 @@
   "name": "t:names.contact_form",
   "tag": null,
   "settings": [
+    {
+      "type": "textarea",
+      "id": "default_message",
+      "label": "t:settings.default_message",
+      "default": "Descrivi qui la tua richiesta"
+    },
     {
       "type": "select",
       "id": "width",

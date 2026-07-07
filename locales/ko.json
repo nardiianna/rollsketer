@@ -349,5 +349,11 @@
       "success_moderated": "댓글이 게시되었습니다. 조정 대기 중입니다",
       "success": "댓글 게시됨"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>저희 팀이 도와드리겠습니다. 문의해 주시면 최대한 빨리 답변드리겠습니다.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "제출"
   }
 }

@@ -349,5 +349,11 @@
       "success_moderated": "Kommentar gepostet, Moderation ausstehend",
       "success": "Kommentar gepostet"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Unser Team ist für Sie da. Kontaktieren Sie uns und wir melden uns so schnell wie möglich.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Senden"
   }
 }

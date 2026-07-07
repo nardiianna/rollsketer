@@ -349,5 +349,11 @@
       "success_moderated": "Komentar diposting, menunggu moderasi",
       "success": "Komentar diposting"
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Tim kami siap membantu. Hubungi kami dan kami akan merespons secepat mungkin.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Kirim"
   }
 }

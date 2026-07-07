@@ -935,5 +935,11 @@
         }
       }
     }
+  },
+  "html_defaults": {
+    "contact_us": "<p>Our team is here to help. Reach out and we'll get back to you as soon as possible.</p>"
+  },
+  "text_defaults": {
+    "submit_button_label": "Submit"
   }
 }

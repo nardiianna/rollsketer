@@ -480,6 +480,7 @@
     "custom_liquid": "Liquidコード",
     "default": "デフォルト",
     "default_logo": "デフォルトのロゴ",
+    "default_message": "デフォルトのメッセージ",
     "divider_width": "区切り線の幅",
     "horizontal_padding": "水平方向の余白",
     "inverse": "反転",

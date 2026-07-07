@@ -484,6 +484,7 @@
     "custom_liquid": "Liquid-kod",
     "default": "Standard",
     "default_logo": "Standardlogotyp",
+    "default_message": "Standardmeddelande",
     "divider_width": "Avgränsarens bredd",
     "headings": "Rubriker",
     "hide_logo_on_home_page": "Dölj logotypen på startsidan",

@@ -484,6 +484,7 @@
     "custom_liquid": "Liquid 代码",
     "default": "默认",
     "default_logo": "默认 logo",
+    "default_message": "默认消息",
     "divider_width": "分隔线宽度",
     "hide_logo_on_home_page": "在主页上隐藏 logo",
     "horizontal_padding": "水平内边距",

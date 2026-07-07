@@ -480,6 +480,7 @@
     "custom_liquid": "Código Liquid",
     "default": "Predeterminado",
     "default_logo": "Logo predeterminado",
+    "default_message": "Mensaje predeterminado",
     "divider_width": "Ancho del separador",
     "hide_logo_on_home_page": "Ocultar el logo en la página de inicio",
     "horizontal_padding": "Relleno horizontal",
