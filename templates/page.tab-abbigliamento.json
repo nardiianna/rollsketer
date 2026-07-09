@@ -122,15 +122,103 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "image_abbig_0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/icenonice-tabella-taglie-maglie-felpe.jpg",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        },
+        "image_abbig_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/icenonice-tabella-taglie-leggings.jpg",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        },
+        "image_abbig_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/icenonice-tabella-taglie-top.jpg",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        },
+        "image_abbig_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/icenonice-tabella-taglie-body-tuta.jpg",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
         }
       },
       "block_order": [
         "heading",
         "text_4sCi9jPL",
         "data_table_SzxyetrW",
+        "image_abbig_0",
         "data_table_Bfbv9bBV",
+        "image_abbig_1",
         "data_table_hX2Zi5oX",
+        "image_abbig_2",
         "data_table_XGUVXt7M",
+        "image_abbig_3",
         "data_table_wh092OTy",
         "text_j5VH2jgq"
       ],
