@@ -114,8 +114,26 @@
           >
             <span class="menu-list__link-title">{{- link.title -}}</span>
           </a>
+          {%- liquid
+            assign link_content_type = menu_content_type
+
+            if link_content_type == 'featured_products'
+              unless link.type == 'collection_link' or link.type == 'catalog_link' or link.type == 'collections_link'
+                assign link_content_type = 'text'
+              endunless
+            endif
+
+            if link_content_type == 'collection_images'
+              assign collection_links_check = link.links | where: 'type', 'collection_link'
+              assign catalog_links_check = link.links | where: 'type', 'catalog_link'
+              assign collections_link_check = link.links | where: 'type', 'collections_link'
+              if collection_links_check.size == 0 and catalog_links_check.size == 0 and collections_link_check.size == 0
+                assign link_content_type = 'text'
+              endif
+            endif
+          -%}
           {%- if link.links != blank -%}
-            <div class="menu-list__submenu{{ color_scheme_classes }}{% if menu_content_type == 'text' %} menu-list__submenu--simple{% endif %}" ref="submenu[]">
+            <div class="menu-list__submenu{{ color_scheme_classes }}{% if link_content_type == 'text' %} menu-list__submenu--simple{% endif %}" ref="submenu[]">
               <div
                 id="submenu-{{ forloop.index }}"
                 class="menu-list__submenu-inner"
