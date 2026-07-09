@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_4sCi9jPL": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>IceNoNice by Carolina Kostner x Sagester — tabelle taglie</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "data_table_SzxyetrW": {
+          "type": "data-table",
+          "settings": {
+            "title": "Maglie e felpe",
+            "table_data": "Taglia|Semi circ. seno (A)|Lunghezza capo (B)|Semi circ. bacino (D)|Lunghezza manica (E)\n## Maxi T-Shirt CK009 — 91% cotone, 9% elastane\nXXS|41cm|65cm| | \nXS|44cm|74,5cm| | \nS|47cm|84cm| | \nM|49cm|86,5cm| | \nL|52cm|87,5cm| | \n## Bronze Style CK201 — esterno 50% poliuretano 50% poliestere, interno 96% poliestere 4% elastane\nXXS|48cm|54cm|51cm|58cm\nXS|51cm|58cm|54cm|62cm\nS|54cm|62cm|57cm|65cm\nM|56cm|64cm|59cm|67cm\nL|58cm|65cm|61cm|67,5cm\n## Polar Cool CK801 — esterno 100% poliestere, interno 90% poliammide 10% elastane\nXXS|50cm|50cm| | \nXS|52cm|52cm| | \nS|54cm|54cm| | \nM|56cm|55,5cm| | \nL|58cm|57cm| | "
+          }
+        },
+        "data_table_Bfbv9bBV": {
+          "type": "data-table",
+          "settings": {
+            "title": "Leggings",
+            "table_data": "Taglia|Bacino (D) / Hip|Lunghezza gamba (C) / Leg length|Coscia (F) / Thigh\n## Leggings Heat gold logo CK401 — 53% poliammide, 35% poliammide (Heat), 12% elastane\nXS|65cm-75cm|91cm|29cm-44cm\nS|75cm-85cm|94cm|31cm-43cm\nM|85cm-95cm|99cm|34cm-46cm\nL|95cm-105cm|102cm|35cm-54cm\n## Leggings Chic CK402 — 53% poliammide, 35% poliammide (Heat), 12% elastane\nXS|65cm-75cm|91cm|29cm-44cm\nS|75cm-85cm|94cm|31cm-43cm\nM|85cm-95cm|99cm|34cm-46cm\nL|95cm-105cm|102cm|35cm-54cm\n## Leggings Heat white logo CK403 — 53% poliammide, 35% poliammide (Heat), 12% elastane\nXS|65cm-75cm|91cm|29cm-44cm\nS|75cm-85cm|94cm|31cm-43cm\nM|85cm-95cm|99cm|34cm-46cm\nL|95cm-105cm|102cm|35cm-54cm"
+          }
+        },
+        "data_table_hX2Zi5oX": {
+          "type": "data-table",
+          "settings": {
+            "title": "Top",
+            "table_data": "Taglia|Seno (A) / Chest|Lunghezza capo (B) / Item length|Lunghezza manica (E) / Sleeve length\n## Cropped Top CK901 — 80% poliammide, 20% elastane\nXXS|58cm-68cm|30cm|48cm\nXS|62cm-72cm|33cm|52cm\nS|75cm-85cm|36cm|56cm\nM|82cm-95cm|38cm|59cm\nL|88cm-98cm|40cm|60cm\n## IceNoNice Top CK902 — 53% poliammide, 35% poliammide (Heat), 12% elastane\nXXS|58cm-68cm|22/23cm| \nXS|62cm-72cm|23/25cm| \nS|75cm-85cm|30/32cm| \nM|82cm-95cm|32/33cm| \nL|88cm-98cm|33/35cm| \n## Cropped Top Black & White CK903 — 91% poliammide, 9% elastane\nXXS|58cm-68cm|26cm|41cm\nXS|62cm-72cm|29cm|46cm\nS|75cm-85cm|32cm|50cm\nM|82cm-95cm|34cm|52cm\nL|88cm-98cm|36cm|56cm"
+          }
+        },
+        "data_table_XGUVXt7M": {
+          "type": "data-table",
+          "settings": {
+            "title": "Body",
+            "table_data": "Taglia|Seno (A) / Chest|Bacino (D) / Hip|Busto (G) / Torso\n## Black Leotard CK101 — 91% poliammide, 9% elastane\nXS|62cm-72cm|65cm-75cm|123cm-135cm\nS|75cm-85cm|75cm-85cm|132cm-140cm\nM|82cm-95cm|85cm-95cm|142cm-149cm\nL|88cm-98cm|95cm-105cm|151cm-157cm\n## Black Leotard gold logo CK102 — 91% poliammide, 9% elastane\nXS|62cm-72cm|65cm-75cm|123cm-135cm\nS|75cm-85cm|75cm-85cm|132cm-140cm\nM|82cm-95cm|85cm-95cm|142cm-149cm\nL|88cm-98cm|95cm-105cm|151cm-157cm"
+          }
+        },
+        "data_table_wh092OTy": {
+          "type": "data-table",
+          "settings": {
+            "title": "Tuta IceNoNice CK601 — 100% cotone",
+            "table_data": "Taglia|Semi circ. seno (A)|Lunghezza maglia davanti|Semi circ. bacino (D)|Lunghezza gamba (C)|Lunghezza manica (E)\nXXS|48cm|35,5cm|45cm|83cm|48,5cm\nXS|51cm|39cm|46cm|91cm|53,5cm\nS|54cm|44cm|47cm|101cm|58cm\nM|56cm|45cm|48cm|105cm|60cm\nL|58cm|47cm|49cm|108cm|62cm\nXL|58cm|49cm|53cm|110cm|64cm"
+          }
+        },
+        "text_j5VH2jgq": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Le taglie indicate in queste tabelle non sono paragonabili alle taglie Sagester standard: verificare bene le misure prima di effettuare un ordine.</em></p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_4sCi9jPL",
+        "data_table_SzxyetrW",
+        "data_table_Bfbv9bBV",
+        "data_table_hX2Zi5oX",
+        "data_table_XGUVXt7M",
+        "data_table_wh092OTy",
+        "text_j5VH2jgq"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
