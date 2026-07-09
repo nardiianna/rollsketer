@@ -475,6 +475,14 @@
     display: block;
   }
 
+  /* The full-width colored underlay behind an open submenu exists to back
+     the full-bleed mega menu. A compact dropdown doesn't need it, so keep
+     it collapsed while a simple submenu is the one open. */
+  #header-component:has(.menu-list__list-item:has(> .menu-list__submenu--simple) .menu-list__link[aria-expanded='true']) .header__underlay-open,
+  #header-component:has(.menu-list__submenu--simple:hover) .header__underlay-open {
+    height: 0;
+  }
+
   /* Show the submenus on hover */
   .menu-list__list-item:has([aria-expanded='true']) > .menu-list__submenu,
   /* Show the overflow menu when a menu item is hovered */
