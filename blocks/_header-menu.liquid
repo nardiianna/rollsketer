@@ -115,7 +115,7 @@
             <span class="menu-list__link-title">{{- link.title -}}</span>
           </a>
           {%- if link.links != blank -%}
-            <div class="menu-list__submenu{{ color_scheme_classes }}" ref="submenu[]">
+            <div class="menu-list__submenu{{ color_scheme_classes }}{% if menu_content_type == 'text' %} menu-list__submenu--simple{% endif %}" ref="submenu[]">
               <div
                 id="submenu-{{ forloop.index }}"
                 class="menu-list__submenu-inner"
@@ -414,6 +414,46 @@
     .overflow-menu::part(overflow) {
       clip-path: rect(var(--top-row-height) 100% var(--full-open-header-height) 0); /* stylelint-disable-line */
     }
+  }
+
+  /* Simple text-only submenus (no images/products) open as a compact dropdown
+     sized to their content, anchored under their own menu item, instead of
+     the full-width mega menu layout. */
+  .menu-list__list-item:has(> .menu-list__submenu--simple) {
+    position: relative;
+  }
+
+  .menu-list__list-item:where(:not([slot='overflow'])) > .menu-list__submenu.menu-list__submenu--simple {
+    width: max-content;
+    left: 0;
+    right: auto;
+    padding-inline: 0;
+    clip-path: none; /* stylelint-disable-line */
+  }
+
+  .menu-list__submenu--simple .menu-list__submenu-inner {
+    display: block;
+    padding: var(--padding-sm) var(--padding-md);
+    transform: none;
+    max-height: none;
+  }
+
+  .menu-list__submenu--simple .mega-menu {
+    display: block;
+    padding-inline: 0;
+  }
+
+  .menu-list__submenu--simple .mega-menu__grid {
+    display: block;
+    width: max-content;
+  }
+
+  .menu-list__submenu--simple .mega-menu__list {
+    display: block;
+  }
+
+  .menu-list__submenu--simple .mega-menu__column {
+    display: block;
   }
 
   /* Show the submenus on hover */
