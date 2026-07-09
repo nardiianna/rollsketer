@@ -1,0 +1,496 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_NbrnTP3f": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>EDEA x Roll-Line</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "size_chart_AbnFbmOH": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Esordio / Rondò / Ritmo / Wave / Fly / Classica / Flamenco x Steel Frames",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305, 310",
+            "row2_label": "Telaio",
+            "row2_values": "090, 090, 100, 100, 100, 100, 110, 110, 120, 120, 130, 130, 140, 140, 150, 150, 160, 160, 160, 170, 170, 180, 180, 190, 190, X"
+          }
+        },
+        "size_chart_nKYaXRvj": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Esordio x Mirage",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300",
+            "row2_label": "Telaio",
+            "row2_values": "100, 100, 100, 110, 120, 120, 120, 130, 130, 130, 140, 140, 150, 150, 160, 160, 170, 170, X, X"
+          }
+        },
+        "size_chart_7uff0LYT": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Esordio / Rondò / Ritmo / Fly / Classica / Flamenco x Evo",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290",
+            "row2_label": "Telaio",
+            "row2_values": "130, 135, 140, 140, 145, 150, 155, 160, 165, 170, 175, 180"
+          }
+        },
+        "size_chart_H8xIZM1J": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Tempo / Motivo / Overture / Chorus / Concerto / Ice Fly / Piano / Flamenco Ice x Steel Frames",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305, 310",
+            "row2_label": "Telaio",
+            "row2_values": "090, 090, 100, 100, 100, 100, 110, 110, 120, 120, 130, 130, 140, 140, 150, 150, 160, 160, 170, 170, 180, 180, 190, 190, 190, X"
+          }
+        },
+        "size_chart_Rcoreogr": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Tempo / Motivo / Wave x Mirage",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290",
+            "row2_label": "Telaio",
+            "row2_values": "100, 100, 110, 110, 120, 120, 120, 130, 130, 140, 140, 140, 150, 150, 160, 160, 170, 170"
+          }
+        },
+        "size_chart_Nwwmq6OL": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Tempo / Motivo / Overture / Chorus / Concerto / Ice Fly / Piano / Flamenco Ice x Evo",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290",
+            "row2_label": "Telaio",
+            "row2_values": "130, 135, 140, 140, 145, 150, 155, 160, 165, 170, 175, 180"
+          }
+        },
+        "text_kTkx9NIQ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Risport x Roll-Line</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "size_chart_0Wobtqn6": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Venus / Antares x Steel Frames",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "180, 185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280",
+            "row2_label": "Telaio",
+            "row2_values": "090, 090, 090, 090, 100, 100, 110, 110, 120, 120, 130, 130, 140, 140, 150, 150, 160, 160, 170, 170, 180"
+          }
+        },
+        "size_chart_2tOy4Cqp": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Venus / Antares x Mirage",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "180, 185, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280",
+            "row2_label": "Telaio",
+            "row2_values": "X, X, X, X, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17"
+          }
+        },
+        "size_chart_IqK3yn9F": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Giada / Ambra Pro / Ambra Elite / Mercurio x Steel Frames",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305",
+            "row2_label": "Telaio",
+            "row2_values": "110, 110, 120, 120, 130, 130, 140, 140, 150, 150, 160, 160, 170, 170, 170, 180, 180, 190, 190, 200"
+          }
+        },
+        "size_chart_fcgMXAdx": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Giada / Ambra Pro / Ambra Elite / Mercurio x Evo",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290",
+            "row2_label": "Telaio",
+            "row2_values": "130, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 180"
+          }
+        },
+        "size_chart_9G81aSQH": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Electra / RF3 Pro / Royal Pro / RF1 Elite / Royal Prime / Turchese / Dance Prime x Steel Frames",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305",
+            "row2_label": "Telaio",
+            "row2_values": "100, 100, 110, 110, 120, 120, 120, 130, 130, 140, 140, 150, 150, 160, 160, 170, 170, 180, 180, 180, 190, 190"
+          }
+        },
+        "size_chart_qNgAC72q": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Electra / RF3 Pro / Royal Pro / RF1 Elite / Royal Prime / Turchese / Dance Prime x Evo",
+            "row1_label": "Scarpone (mm)",
+            "row1_values": "235, 240, 245, 250, 255, 260, 265, 270, 275, 280, 285, 290, 295",
+            "row2_label": "Telaio",
+            "row2_values": "130, 135, 140, 140, 145, 150, 155, 160, 165, 170, 180, 180, 180"
+          }
+        },
+        "text_Fl41sNLj": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Belati x Roll-Line / Mirage / Evo</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "size_chart_VHWGaub5": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Primula x Steel Frames",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42",
+            "row2_label": "Telaio",
+            "row2_values": "90, 90, 90, 100, 100, 110, 120, 120, 130, 140, 140, 150, 160, 160, 170, 180"
+          }
+        },
+        "size_chart_2Ztd26fE": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Primula x Mirage",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42",
+            "row2_label": "Telaio",
+            "row2_values": "X, X, X, 10, 10, 11, 11, 11, 12, 13, 13, 14, 15, 15, 16, 17"
+          }
+        },
+        "size_chart_eVVhDIq2": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Giglio / Lillà / Primula x Evo",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42",
+            "row2_label": "Telaio",
+            "row2_values": "X, X, X, X, X, X, X, X, 130, 135, 140, 150, 155, 160, 170, 175"
+          }
+        },
+        "size_chart_AnHTmt9O": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Giglio / Erica / Lillà x Steel Frames",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42",
+            "row2_label": "Telaio",
+            "row2_values": "100, 100, 110, 120, 120, 130, 140, 140, 150, 160, 160, 170, 180"
+          }
+        },
+        "size_chart_BGhnuKon": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Lillà / Ninfea x Steel Frames",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49",
+            "row2_label": "Telaio",
+            "row2_values": "100, 100, 110, 120, 120, 130, 140, 140, 150, 160, 160, 170, 170, 180, 180, 190, 190, ?, ?, ?"
+          }
+        },
+        "text_eNo41eoP": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Botas x Komplex</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "size_chart_ni6JDWYl": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Regina x Florent",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40",
+            "row2_label": "Telaio",
+            "row2_values": "X, X, X, 10, 10, 10, 11, 12, 12, 12, 13, 14, 14, 15"
+          }
+        },
+        "size_chart_gAACTP9g": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Scarpe Nela x Mirage",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42",
+            "row2_label": "Telaio",
+            "row2_values": "10, 10, 11, 11, 12, 12, 13, 13, 14, 15, 15, 16, 16"
+          }
+        },
+        "size_chart_yv1plBAr": {
+          "type": "size-chart-table",
+          "settings": {
+            "title": "Scarpe Nela x Variant",
+            "row1_label": "Scarpa (EU)",
+            "row1_values": "27/28, 29/30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42",
+            "row2_label": "Telaio",
+            "row2_values": "9, 10, 11, 12, 12, 13, 13, 13, 14, 15, 16, 16, 17, 17"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_NbrnTP3f",
+        "size_chart_AbnFbmOH",
+        "size_chart_nKYaXRvj",
+        "size_chart_7uff0LYT",
+        "size_chart_H8xIZM1J",
+        "size_chart_Rcoreogr",
+        "size_chart_Nwwmq6OL",
+        "text_kTkx9NIQ",
+        "size_chart_0Wobtqn6",
+        "size_chart_2tOy4Cqp",
+        "size_chart_IqK3yn9F",
+        "size_chart_fcgMXAdx",
+        "size_chart_9G81aSQH",
+        "size_chart_qNgAC72q",
+        "text_Fl41sNLj",
+        "size_chart_VHWGaub5",
+        "size_chart_2Ztd26fE",
+        "size_chart_eVVhDIq2",
+        "size_chart_AnHTmt9O",
+        "size_chart_BGhnuKon",
+        "text_eNo41eoP",
+        "size_chart_ni6JDWYl",
+        "size_chart_gAACTP9g",
+        "size_chart_yv1plBAr"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "section_M8NTMJ": {
+      "type": "section",
+      "blocks": {
+        "text_jnYi37": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Iscriviti alla Newsletter</h3>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_R9fdDC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Scopri le novità dal mondo Roll Skater.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "email_signup_rjy8wN": {
+          "type": "email-signup",
+          "settings": {
+            "width": "custom",
+            "custom_width": 36,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "heading": "",
+            "heading_preset": "h3",
+            "border_style": "all",
+            "border_width": 1,
+            "border_radius": 100,
+            "input_type_preset": "paragraph",
+            "style_class": "button-unstyled",
+            "display_type": "arrow",
+            "label": "Sign up",
+            "integrated_button": true,
+            "button_type_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_jnYi37",
+        "text_R9fdDC",
+        "email_signup_rjy8wN"
+      ],
+      "name": "t:names.email_signup",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_M8NTMJ"
+  ]
+}

@@ -1,0 +1,112 @@
+{% doc %}
+  Renders an editable two-row size comparison table (e.g. boot size to frame size).
+
+  Settings: title, row1_label, row1_values, row2_label, row2_values (comma-separated).
+{% enddoc %}
+
+{%- liquid
+  assign row1_values = block.settings.row1_values | split: ','
+  assign row2_values = block.settings.row2_values | split: ','
+-%}
+
+<div class="size-chart-table" {{ block.shopify_attributes }}>
+  {%- if block.settings.title != blank -%}
+    <h3 class="size-chart-table__title">{{ block.settings.title }}</h3>
+  {%- endif -%}
+  <div class="size-chart-table__scroll">
+    <table class="size-chart-table__table">
+      <tbody>
+        <tr>
+          <th scope="row">{{ block.settings.row1_label }}</th>
+          {%- for value in row1_values -%}
+            <td>{{ value | strip }}</td>
+          {%- endfor -%}
+        </tr>
+        <tr>
+          <th scope="row">{{ block.settings.row2_label }}</th>
+          {%- for value in row2_values -%}
+            <td>{{ value | strip }}</td>
+          {%- endfor -%}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% stylesheet %}
+  .size-chart-table {
+    width: 100%;
+  }
+
+  .size-chart-table__title {
+    margin-block-end: var(--margin-sm);
+  }
+
+  .size-chart-table__scroll {
+    overflow-x: auto;
+  }
+
+  .size-chart-table__table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .size-chart-table__table th,
+  .size-chart-table__table td {
+    border: var(--border-width-sm) solid var(--color-border);
+    padding: var(--padding-2xs) var(--padding-sm);
+    text-align: center;
+    white-space: nowrap;
+    font-size: var(--font-size--sm);
+  }
+
+  .size-chart-table__table th {
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+    background-color: var(--color-background);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Tabella misure",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titolo tabella",
+      "info": "Es. nome modello scarpone x telaio"
+    },
+    {
+      "type": "text",
+      "id": "row1_label",
+      "label": "Etichetta riga 1",
+      "default": "Scarpone (mm)"
+    },
+    {
+      "type": "text",
+      "id": "row1_values",
+      "label": "Valori riga 1",
+      "info": "Separati da virgola"
+    },
+    {
+      "type": "text",
+      "id": "row2_label",
+      "label": "Etichetta riga 2",
+      "default": "Telaio"
+    },
+    {
+      "type": "text",
+      "id": "row2_values",
+      "label": "Valori riga 2",
+      "info": "Separati da virgola, stesso numero di valori della riga 1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabella misure"
+    }
+  ]
+}
+{% endschema %}
