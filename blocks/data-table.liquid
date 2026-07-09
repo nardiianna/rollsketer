@@ -1,0 +1,102 @@
+{% doc %}
+  Renders a flexible multi-row, multi-column data table from plain text.
+
+  Settings: title, table_data (one row per line, cells separated by "|").
+  A line starting with "## " is rendered as a full-width sub-heading row.
+{% enddoc %}
+
+{%- liquid
+  assign lines = block.settings.table_data | newline_to_br | split: '<br />'
+-%}
+
+<div class="data-table" {{ block.shopify_attributes }}>
+  {%- if block.settings.title != blank -%}
+    <h3 class="data-table__title">{{ block.settings.title }}</h3>
+  {%- endif -%}
+  <div class="data-table__scroll">
+    <table class="data-table__table">
+      <tbody>
+        {%- for line in lines -%}
+          {%- assign trimmed = line | strip -%}
+          {%- if trimmed != blank -%}
+            {%- assign is_heading = false -%}
+            {%- assign prefix = trimmed | slice: 0, 3 -%}
+            {%- if prefix == '## ' -%}
+              {%- assign is_heading = true -%}
+              {%- assign trimmed = trimmed | remove_first: '## ' -%}
+            {%- endif -%}
+            {%- assign cells = trimmed | split: '|' -%}
+            <tr{% if is_heading %} class="data-table__row--heading"{% endif %}>
+              {%- if is_heading -%}
+                <td colspan="{{ cells.size }}">{{ cells.first | strip }}</td>
+              {%- else -%}
+                {%- for cell in cells -%}
+                  <td>{{ cell | strip }}</td>
+                {%- endfor -%}
+              {%- endif -%}
+            </tr>
+          {%- endif -%}
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% stylesheet %}
+  .data-table {
+    width: 100%;
+  }
+
+  .data-table__title {
+    margin-block-end: var(--margin-sm);
+  }
+
+  .data-table__scroll {
+    overflow-x: auto;
+  }
+
+  .data-table__table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .data-table__table td {
+    border: var(--border-width-sm) solid var(--color-border);
+    padding: var(--padding-2xs) var(--padding-sm);
+    text-align: left;
+    white-space: nowrap;
+    font-size: var(--font-size--sm);
+  }
+
+  .data-table__row--heading td {
+    font-weight: var(--font-weight-bold);
+    background-color: var(--color-background);
+    text-align: left;
+    white-space: normal;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Tabella dati",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titolo tabella"
+    },
+    {
+      "type": "textarea",
+      "id": "table_data",
+      "label": "Contenuto tabella",
+      "info": "Una riga per riga della tabella. Celle separate da \"|\". Una riga che inizia con \"## \" diventa un’intestazione a tutta larghezza."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabella dati"
+    }
+  ]
+}
+{% endschema %}
