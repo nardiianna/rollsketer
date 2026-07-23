@@ -16,6 +16,10 @@
       "placeholder": "이메일 주소",
       "success": "가입해 주셔서 감사합니다!"
     },
+    "newsletter_mailchimp": {
+      "label": "이메일",
+      "placeholder": "이메일 주소"
+    },
     "filter": "필터",
     "payment_methods": "결제 방법",
     "contact_form": {

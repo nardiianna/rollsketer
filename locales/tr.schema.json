@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "newsletter_mailchimp": "Newsletter (Mailchimp)",
     "404": "404",
     "borders": "Kenarlıklar",
     "collapsible_row": "Daraltılabilir satır",
@@ -200,6 +201,12 @@
     "layered_slideshow": "Katmanlı slayt gösterisi"
   },
   "settings": {
+    "mailchimp_action_url": "Mailchimp form action URL",
+    "mailchimp_bot_field_name": "Mailchimp anti-spam field name",
+    "mailchimp_gdpr_field_id": "Mailchimp GDPR field ID",
+    "gdpr_consent_text": "Consent checkbox text",
+    "mailchimp_language_group_id": "Mailchimp language group ID",
+    "mailchimp_language_value": "Mailchimp language value",
     "autoplay": "Otomatik oynatma",
     "background": "Arka plan",
     "border_radius": "Köşe yarıçapı",
@@ -866,6 +873,8 @@
     "icons": "Simgeler"
   },
   "content": {
+    "mailchimp_connection": "Mailchimp connection",
+    "newsletter_mailchimp_intro": "Submits directly to a Mailchimp audience. Sign-ups are not added as Shopify customers.",
     "background_video": "Arka plan videosu",
     "describe_the_video_for": "Ekran okuyucu kullanan müşteriler için videoyu açıklayın. [Daha fazla bilgi edinin](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Genişlik, mobil cihazlar için otomatik olarak optimize edilir.",
@@ -1077,6 +1086,8 @@
     "new_arrivals": "Yeni gelenler"
   },
   "info": {
+    "mailchimp_action_url": "Found in Mailchimp under Audience > Signup forms > Embedded form, as the form's \"action\" attribute",
+    "mailchimp_language_value": "Value of the language option to preselect, from the embedded form's group field",
     "video_alt_text": "Yardımcı teknoloji kullanıcıları için videoyu açıklayın",
     "video_autoplay": "Videolar varsayılan olarak sessize alınır",
     "video_external": "Bir YouTube veya Vimeo URL'si kullanın",

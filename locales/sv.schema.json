@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "newsletter_mailchimp": "Newsletter (Mailchimp)",
     "404": "404",
     "borders": "Kantlinjer",
     "collapsible_row": "Hopfällbar rad",
@@ -200,6 +201,12 @@
     "layered_slideshow": "Bildspel med lager"
   },
   "settings": {
+    "mailchimp_action_url": "Mailchimp form action URL",
+    "mailchimp_bot_field_name": "Mailchimp anti-spam field name",
+    "mailchimp_gdpr_field_id": "Mailchimp GDPR field ID",
+    "gdpr_consent_text": "Consent checkbox text",
+    "mailchimp_language_group_id": "Mailchimp language group ID",
+    "mailchimp_language_value": "Mailchimp language value",
     "alignment": "Justering",
     "autoplay": "Autouppspelning",
     "background": "Bakgrund",
@@ -866,6 +873,8 @@
     "icons": "Ikoner"
   },
   "content": {
+    "mailchimp_connection": "Mailchimp connection",
+    "newsletter_mailchimp_intro": "Submits directly to a Mailchimp audience. Sign-ups are not added as Shopify customers.",
     "advanced": "Avancerat",
     "background_image": "Bakgrundsbild",
     "background_video": "Bakgrundsvideo",
@@ -1077,6 +1086,8 @@
     "new_arrivals": "Nyheter"
   },
   "info": {
+    "mailchimp_action_url": "Found in Mailchimp under Audience > Signup forms > Embedded form, as the form's \"action\" attribute",
+    "mailchimp_language_value": "Value of the language option to preselect, from the embedded form's group field",
     "video_alt_text": "Beskriv videon för användare av hjälpmedelsteknik",
     "video_autoplay": "Videor kommer att vara tystade som standard",
     "video_external": "Använd en URL från YouTube eller Vimeo",

@@ -16,6 +16,10 @@
       "placeholder": "Адрес электронной почты",
       "success": "Спасибо, что подписались!"
     },
+    "newsletter_mailchimp": {
+      "label": "Электронный адрес",
+      "placeholder": "Адрес электронной почты"
+    },
     "filter": "Фильтровать",
     "payment_methods": "Способы оплаты",
     "contact_form": {

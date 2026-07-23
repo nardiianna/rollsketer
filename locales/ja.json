@@ -16,6 +16,10 @@
       "placeholder": "メールアドレス",
       "success": "ご登録ありがとうございます！"
     },
+    "newsletter_mailchimp": {
+      "label": "メール",
+      "placeholder": "メールアドレス"
+    },
     "filter": "フィルター",
     "payment_methods": "決済方法",
     "contact_form": {

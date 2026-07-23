@@ -16,6 +16,10 @@
       "placeholder": "E-mail-cím",
       "success": "Köszönjük feliratkozást!"
     },
+    "newsletter_mailchimp": {
+      "label": "E-mail-cím",
+      "placeholder": "E-mail-cím"
+    },
     "filter": "Szűrés",
     "payment_methods": "Fizetési módok",
     "contact_form": {

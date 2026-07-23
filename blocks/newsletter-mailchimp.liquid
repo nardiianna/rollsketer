@@ -2,46 +2,49 @@
 
 {% assign block_settings = block.settings %}
 <div
-  class="email-signup-block size-style spacing-style"
+  class="newsletter-mailchimp-block size-style spacing-style"
   style="{% render 'size-style', settings: block_settings %}{% render 'spacing-style', settings: block_settings %}"
   {{ block.shopify_attributes }}
 >
   {% if block_settings.heading != blank %}
-    <div class="email-signup__heading {{ block_settings.heading_preset }}">
+    <div class="newsletter-mailchimp__heading {{ block_settings.heading_preset }}">
       {{ block_settings.heading | escape }}
     </div>
   {% endif %}
-  {%- form 'customer', class: 'email-signup__form spacing-style' %}
+
+  <form
+    action="{{ block_settings.mailchimp_action_url }}"
+    method="post"
+    id="mc-embedded-subscribe-form-{{ block.id }}"
+    name="mc-embedded-subscribe-form"
+    class="newsletter-mailchimp__form spacing-style"
+    target="_blank"
+    novalidate
+  >
     <div
-      class="email-signup__input-group {% if block_settings.integrated_button and block_settings.border_style != 'underline' %}email-signup__input-group--integrated{% endif %} {% if block_settings.border_style == 'underline' %}email-signup__input-group--underline{% endif %} {% if block_settings.border_style == 'none' %}email-signup__input-group--no-border{% endif %} {% if block_settings.display_type == 'arrow' %}email-signup__input-group--arrow{% endif %} {% if block_settings.inherit_color_scheme == false %}color-{{ block_settings.color_scheme }}{% endif %}"
+      class="newsletter-mailchimp__input-group {% if block_settings.integrated_button and block_settings.border_style != 'underline' %}newsletter-mailchimp__input-group--integrated{% endif %} {% if block_settings.border_style == 'underline' %}newsletter-mailchimp__input-group--underline{% endif %} {% if block_settings.border_style == 'none' %}newsletter-mailchimp__input-group--no-border{% endif %} {% if block_settings.display_type == 'arrow' %}newsletter-mailchimp__input-group--arrow{% endif %} {% if block_settings.inherit_color_scheme == false %}color-{{ block_settings.color_scheme }}{% endif %}"
       style="--border-width: {{ block_settings.border_width }}px; --border-radius: {{ block_settings.border_radius }}px;"
     >
       <label
-        for="EmailInput-{{ block.id }}"
+        for="MailchimpEmail-{{ block.id }}"
         class="visually-hidden"
       >
-        {{ 'blocks.email_signup.label' | t }}
+        {{ 'blocks.newsletter_mailchimp.label' | t }}
       </label>
       <input
-        id="EmailInput-{{ block.id }}"
-        class="email-signup__input email-signup__input--{{ block_settings.border_style }} {{ block_settings.input_type_preset }} {{ block_settings.border_variation }}"
+        id="MailchimpEmail-{{ block.id }}"
+        class="newsletter-mailchimp__input newsletter-mailchimp__input--{{ block_settings.border_style }} {{ block_settings.input_type_preset }} {{ block_settings.border_variation }}"
         type="email"
-        name="contact[email]"
+        name="EMAIL"
         autocorrect="off"
         autocapitalize="off"
         autocomplete="email"
-        placeholder="{{ 'blocks.email_signup.placeholder' | t }}"
+        placeholder="{{ 'blocks.newsletter_mailchimp.placeholder' | t }}"
         required
-        {% if form.errors and form.id == blank %}
-          autofocus
-          aria-invalid="true"
-          aria-describedby="Email-signup__message-error-{{ block.id }}"
-        {% elsif form.posted_successfully? and form.id == blank %}
-          aria-describedby="Email-signup__message-success-{{ block.id }}"
-        {% endif %}
       >
       <button
-        class="email-signup__button {% if block_settings.integrated_button or block_settings.border_style == 'underline' %}email-signup__button--integrated{% endif %} email-signup__button--{{ block_settings.display_type }} {{ block_settings.button_type_preset }} {{ block_settings.style_class }} {{ block_settings.style_class }}--{{ block.id }} {% if block_settings.inherit_color_scheme == false %}color-{{ block_settings.color_scheme }}{% endif %}"
+        class="newsletter-mailchimp__button {% if block_settings.integrated_button or block_settings.border_style == 'underline' %}newsletter-mailchimp__button--integrated{% endif %} newsletter-mailchimp__button--{{ block_settings.display_type }} {{ block_settings.button_type_preset }} {{ block_settings.style_class }}"
+        type="submit"
         {% if block_settings.display_type != 'text' %}
           aria-label="{{ 'actions.sign_up' | t }}"
         {% endif %}
@@ -54,7 +57,7 @@
             xmlns="http://www.w3.org/2000/svg"
             focusable="false"
             aria-hidden="true"
-            class="email-signup__button-icon"
+            class="newsletter-mailchimp__button-icon"
           >
             {% render 'icon', icon: 'arrow' %}
           </svg>
@@ -62,43 +65,43 @@
       </button>
     </div>
 
-    {%- if form.errors and form.id == blank -%}
-      <div
-        id="Email-signup__message-error-{{ block.id }}"
-        class="email-signup__message"
-        tabindex="-1"
-      >
-        <svg
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          aria-hidden="true"
-          class="icon-error"
+    {%- if block_settings.gdpr_consent_text != blank -%}
+      <label class="newsletter-mailchimp__consent">
+        <input
+          type="checkbox"
+          name="gdpr[{{ block_settings.mailchimp_gdpr_field_id }}]"
+          id="MailchimpGdpr-{{ block.id }}"
+          value="Y"
+          required
         >
-          {%- render 'icon', icon: 'error'  -%}
-        </svg>
-        {{- form.errors.translated_fields.email | capitalize }}
-        {{ form.errors.messages.email -}}
-      </div>
+        <span>{{ block_settings.gdpr_consent_text }}</span>
+      </label>
     {%- endif -%}
 
-    {%- if form.posted_successfully? and form.id == blank -%}
-      <div
-        id="Email-signup__message-success-{{ block.id }}"
-        class="email-signup__message"
-        tabindex="-1"
+    <input type="hidden" name="FNAME" value="">
+    <input type="hidden" name="LNAME" value="">
+    {% if block_settings.mailchimp_language_group_id != blank and block_settings.mailchimp_language_value != blank %}
+      <input
+        type="hidden"
+        name="group[{{ block_settings.mailchimp_language_group_id }}]"
+        value="{{ block_settings.mailchimp_language_value }}"
       >
-        <span class="svg-wrapper icon-success">
-          {{ 'icon-checkmark.svg' | inline_asset_content }}
-        </span>
-        <p class="email-signup__message-text">{{ 'blocks.email_signup.success' | t }}</p>
-      </div>
-    {%- endif -%}
-  {% endform %}
+    {% endif %}
+
+    {%- comment -%} Mailchimp anti-bot honeypot: must stay empty, real visitors never see or fill it {%- endcomment -%}
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+      <input
+        type="text"
+        name="{{ block_settings.mailchimp_bot_field_name }}"
+        tabindex="-1"
+        value=""
+      >
+    </div>
+  </form>
 </div>
 
 {% stylesheet %}
-  .email-signup-block {
+  .newsletter-mailchimp-block {
     --arrow-button-size: 58px;
     --arrow-button-size-integrated: 42px;
     --arrow-button-size-small: 20px;
@@ -113,35 +116,37 @@
     }
   }
 
-  .email-signup__heading {
+  .newsletter-mailchimp__heading {
     padding-block: var(--padding-sm);
   }
 
-  .email-signup__form {
+  .newsletter-mailchimp__form {
     display: flex;
     flex-direction: column;
   }
 
-  .email-signup__input-group {
+  .newsletter-mailchimp__input-group {
     display: flex;
     align-items: stretch;
     background-color: transparent;
   }
 
-  .email-signup__input-group:not(.email-signup__input-group--integrated):not(.email-signup__input-group--underline) {
+  .newsletter-mailchimp__input-group:not(.newsletter-mailchimp__input-group--integrated):not(
+      .newsletter-mailchimp__input-group--underline
+    ) {
     gap: var(--gap-xs);
     align-items: center;
   }
 
-  .email-signup__input-group:not(.email-signup__input-group--arrow):not(.email-signup__input-group--underline):not(
-      .email-signup__input-group--integrated
-    ) {
+  .newsletter-mailchimp__input-group:not(.newsletter-mailchimp__input-group--arrow):not(
+      .newsletter-mailchimp__input-group--underline
+    ):not(.newsletter-mailchimp__input-group--integrated) {
     @media screen and (max-width: 749px) {
       flex-direction: column;
     }
   }
 
-  .email-signup__input-group--integrated {
+  .newsletter-mailchimp__input-group--integrated {
     border-width: var(--border-width);
     border-radius: var(--border-radius);
     border-style: solid;
@@ -149,11 +154,11 @@
     background-color: var(--color-input-background);
   }
 
-  .email-signup__input-group--integrated.email-signup__input-group--no-border {
+  .newsletter-mailchimp__input-group--integrated.newsletter-mailchimp__input-group--no-border {
     border: none;
   }
 
-  .email-signup__input {
+  .newsletter-mailchimp__input {
     flex: 1;
     min-width: 0;
     border-width: var(--border-width);
@@ -166,18 +171,18 @@
     }
   }
 
-  .email-signup__input-group--integrated .email-signup__input {
+  .newsletter-mailchimp__input-group--integrated .newsletter-mailchimp__input {
     background-color: transparent;
     border: none;
     border-radius: 0;
   }
 
-  .email-signup__input.paragraph {
+  .newsletter-mailchimp__input.paragraph {
     color: var(--color-input-text);
     outline-color: var(--color-input-background);
   }
 
-  .email-signup__button {
+  .newsletter-mailchimp__button {
     white-space: nowrap;
     padding: 0;
 
@@ -186,21 +191,21 @@
     }
   }
 
-  .email-signup__input,
-  .email-signup__button--text {
+  .newsletter-mailchimp__input,
+  .newsletter-mailchimp__button--text {
     padding: var(--padding-lg) var(--padding-3xl);
   }
 
-  .email-signup__input:-webkit-autofill,
-  .email-signup__input:-webkit-autofill:hover,
-  .email-signup__input:-webkit-autofill:focus {
+  .newsletter-mailchimp__input:-webkit-autofill,
+  .newsletter-mailchimp__input:-webkit-autofill:hover,
+  .newsletter-mailchimp__input:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--color-input-text);
     -webkit-box-shadow: 0 0 0 1000px var(--color-input-background) inset;
     box-shadow: 0 0 0 1000px var(--color-input-background) inset;
     transition: background-color 9999s ease-in-out 0s;
   }
 
-  .email-signup__input-group--underline {
+  .newsletter-mailchimp__input-group--underline {
     --box-shadow-color: var(--color-input-border);
     --box-shadow-multiplier: 1;
     --box-shadow-focused-multiplier: 1.75;
@@ -215,7 +220,7 @@
     }
   }
 
-  .email-signup__input-group .email-signup__input--underline {
+  .newsletter-mailchimp__input-group .newsletter-mailchimp__input--underline {
     color: var(--color-input-text);
     background-color: transparent;
     padding: 12px 0;
@@ -227,17 +232,17 @@
     }
   }
 
-  .email-signup__input::placeholder {
+  .newsletter-mailchimp__input::placeholder {
     color: rgb(var(--color-input-text-rgb) / var(--opacity-70));
   }
 
-  .email-signup__input-group .email-signup__input--none {
+  .newsletter-mailchimp__input-group .newsletter-mailchimp__input--none {
     color: var(--color-input-text);
     background-color: var(--color-input-background);
     border: none;
   }
 
-  .email-signup__button-icon {
+  .newsletter-mailchimp__button-icon {
     color: currentcolor;
     padding: 5px;
 
@@ -250,19 +255,19 @@
     }
   }
 
-  .email-signup__button--arrow {
+  .newsletter-mailchimp__button--arrow {
     width: var(--arrow-button-size-small);
     height: var(--arrow-button-size-small);
     padding: 0;
 
-    &:not(.email-signup__button--integrated) {
+    &:not(.newsletter-mailchimp__button--integrated) {
       width: var(--arrow-button-size);
       height: var(--arrow-button-size);
       display: flex;
       align-items: center;
       justify-content: center;
 
-      > .email-signup__button-icon {
+      > .newsletter-mailchimp__button-icon {
         width: var(--arrow-icon-size);
         height: var(--arrow-icon-size);
         padding: 0;
@@ -270,7 +275,7 @@
     }
   }
 
-  .email-signup__button--integrated {
+  .newsletter-mailchimp__button--integrated {
     --button-offset: var(--margin-xs);
     align-self: stretch;
     margin: var(--button-offset);
@@ -280,11 +285,11 @@
       width: fit-content;
     }
 
-    &.email-signup__button--text {
+    &.newsletter-mailchimp__button--text {
       padding: 0 var(--padding-3xl);
     }
 
-    &.email-signup__button--text.button-unstyled {
+    &.newsletter-mailchimp__button--text.button-unstyled {
       padding: 0 var(--padding-xl);
     }
 
@@ -292,11 +297,11 @@
       border-radius: var(--border-radius);
     }
 
-    > .email-signup__button-icon {
+    > .newsletter-mailchimp__button-icon {
       padding: 0;
     }
 
-    &.email-signup__button--arrow {
+    &.newsletter-mailchimp__button--arrow {
       width: var(--arrow-button-size-integrated);
       height: var(--arrow-button-size-integrated);
       align-self: center;
@@ -304,22 +309,22 @@
       align-items: center;
       justify-content: center;
 
-      > .email-signup__button-icon {
+      > .newsletter-mailchimp__button-icon {
         width: var(--arrow-icon-size-small);
         height: var(--arrow-icon-size-small);
       }
     }
   }
 
-  .email-signup__input--underline + .email-signup__button--integrated {
+  .newsletter-mailchimp__input--underline + .newsletter-mailchimp__button--integrated {
     margin: 0;
     align-self: center;
 
-    &.email-signup__button--text {
+    &.newsletter-mailchimp__button--text {
       padding-block: 9px;
     }
 
-    &.email-signup__button--text.button-unstyled {
+    &.newsletter-mailchimp__button--text.button-unstyled {
       padding-inline: 0;
       min-width: 44px;
       min-height: 44px;
@@ -329,59 +334,63 @@
       border-radius: 0;
     }
 
-    &.email-signup__button--arrow {
+    &.newsletter-mailchimp__button--arrow {
       width: var(--arrow-button-size-integrated);
       height: var(--arrow-button-size-integrated);
       display: flex;
       align-items: center;
       justify-content: center;
 
-      > .email-signup__button-icon {
+      > .newsletter-mailchimp__button-icon {
         width: var(--arrow-icon-size-small);
         height: var(--arrow-icon-size-small);
       }
     }
   }
 
-  .email-signup__button:not(.button-unstyled) {
+  .newsletter-mailchimp__button:not(.button-unstyled) {
     background-color: var(--button-background-color);
     color: var(--button-color);
     text-transform: var(--button-text-case-primary);
   }
 
-  .email-signup__button.button-secondary {
+  .newsletter-mailchimp__button.button-secondary {
     text-transform: var(--button-text-case-secondary);
   }
 
-  .email-signup__button.button-unstyled {
+  .newsletter-mailchimp__button.button-unstyled {
     background-color: transparent;
     color: var(--color-input-text);
   }
 
-  .email-signup__button.button-unstyled:hover {
+  .newsletter-mailchimp__button.button-unstyled:hover {
     color: rgb(var(--color-input-text-rgb) / var(--opacity-70));
     cursor: pointer;
   }
 
-  .email-signup__message {
+  .newsletter-mailchimp__consent {
     display: flex;
-    align-items: center;
-    gap: var(--gap-xs);
+    align-items: flex-start;
+    gap: var(--gap-2xs, 6px);
+    margin-block-start: var(--margin-xs, 8px);
+    font-size: 0.75rem;
+    cursor: pointer;
   }
 
-  .email-signup__message-text {
-    margin: 0;
+  .newsletter-mailchimp__consent input[type='checkbox'] {
+    margin-block-start: 3px;
+    flex-shrink: 0;
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "t:names.email_signup",
+  "name": "t:names.newsletter_mailchimp",
   "tag": null,
   "settings": [
     {
       "type": "paragraph",
-      "content": "t:content.email_signups_create_customer_profiles"
+      "content": "t:content.newsletter_mailchimp_intro"
     },
     {
       "type": "select",
@@ -437,38 +446,14 @@
       "id": "heading_preset",
       "label": "t:settings.type_preset",
       "options": [
-        {
-          "value": "",
-          "label": "t:options.default"
-        },
-        {
-          "value": "paragraph",
-          "label": "t:options.paragraph"
-        },
-        {
-          "value": "h1",
-          "label": "t:options.h1"
-        },
-        {
-          "value": "h2",
-          "label": "t:options.h2"
-        },
-        {
-          "value": "h3",
-          "label": "t:options.h3"
-        },
-        {
-          "value": "h4",
-          "label": "t:options.h4"
-        },
-        {
-          "value": "h5",
-          "label": "t:options.h5"
-        },
-        {
-          "value": "h6",
-          "label": "t:options.h6"
-        }
+        { "value": "", "label": "t:options.default" },
+        { "value": "paragraph", "label": "t:options.paragraph" },
+        { "value": "h1", "label": "t:options.h1" },
+        { "value": "h2", "label": "t:options.h2" },
+        { "value": "h3", "label": "t:options.h3" },
+        { "value": "h4", "label": "t:options.h4" },
+        { "value": "h5", "label": "t:options.h5" },
+        { "value": "h6", "label": "t:options.h6" }
       ],
       "default": "h3",
       "info": "t:info.edit_presets_in_theme_settings"
@@ -482,18 +467,9 @@
       "id": "border_style",
       "label": "t:settings.border",
       "options": [
-        {
-          "value": "all",
-          "label": "t:options.all"
-        },
-        {
-          "value": "underline",
-          "label": "t:options.underline"
-        },
-        {
-          "value": "none",
-          "label": "t:options.none"
-        }
+        { "value": "all", "label": "t:options.all" },
+        { "value": "underline", "label": "t:options.underline" },
+        { "value": "none", "label": "t:options.none" }
       ],
       "default": "all"
     },
@@ -524,38 +500,14 @@
       "id": "input_type_preset",
       "label": "t:settings.type_preset",
       "options": [
-        {
-          "value": "",
-          "label": "t:options.default"
-        },
-        {
-          "value": "paragraph",
-          "label": "t:options.paragraph"
-        },
-        {
-          "value": "h1",
-          "label": "t:options.h1"
-        },
-        {
-          "value": "h2",
-          "label": "t:options.h2"
-        },
-        {
-          "value": "h3",
-          "label": "t:options.h3"
-        },
-        {
-          "value": "h4",
-          "label": "t:options.h4"
-        },
-        {
-          "value": "h5",
-          "label": "t:options.h5"
-        },
-        {
-          "value": "h6",
-          "label": "t:options.h6"
-        }
+        { "value": "", "label": "t:options.default" },
+        { "value": "paragraph", "label": "t:options.paragraph" },
+        { "value": "h1", "label": "t:options.h1" },
+        { "value": "h2", "label": "t:options.h2" },
+        { "value": "h3", "label": "t:options.h3" },
+        { "value": "h4", "label": "t:options.h4" },
+        { "value": "h5", "label": "t:options.h5" },
+        { "value": "h6", "label": "t:options.h6" }
       ],
       "default": "paragraph",
       "info": "t:info.edit_presets_in_theme_settings"
@@ -569,18 +521,9 @@
       "id": "style_class",
       "label": "t:settings.style",
       "options": [
-        {
-          "value": "button",
-          "label": "t:options.primary"
-        },
-        {
-          "value": "button-secondary",
-          "label": "t:options.secondary"
-        },
-        {
-          "value": "button-unstyled",
-          "label": "t:options.link"
-        }
+        { "value": "button", "label": "t:options.primary" },
+        { "value": "button-secondary", "label": "t:options.secondary" },
+        { "value": "button-unstyled", "label": "t:options.link" }
       ],
       "default": "button"
     },
@@ -589,14 +532,8 @@
       "id": "display_type",
       "label": "t:settings.display",
       "options": [
-        {
-          "value": "text",
-          "label": "t:options.text"
-        },
-        {
-          "value": "arrow",
-          "label": "t:options.arrow"
-        }
+        { "value": "text", "label": "t:options.text" },
+        { "value": "arrow", "label": "t:options.arrow" }
       ],
       "default": "text"
     },
@@ -619,42 +556,60 @@
       "id": "button_type_preset",
       "label": "t:settings.type_preset",
       "options": [
-        {
-          "value": "",
-          "label": "t:options.default"
-        },
-        {
-          "value": "paragraph",
-          "label": "t:options.paragraph"
-        },
-        {
-          "value": "h1",
-          "label": "t:options.h1"
-        },
-        {
-          "value": "h2",
-          "label": "t:options.h2"
-        },
-        {
-          "value": "h3",
-          "label": "t:options.h3"
-        },
-        {
-          "value": "h4",
-          "label": "t:options.h4"
-        },
-        {
-          "value": "h5",
-          "label": "t:options.h5"
-        },
-        {
-          "value": "h6",
-          "label": "t:options.h6"
-        }
+        { "value": "", "label": "t:options.default" },
+        { "value": "paragraph", "label": "t:options.paragraph" },
+        { "value": "h1", "label": "t:options.h1" },
+        { "value": "h2", "label": "t:options.h2" },
+        { "value": "h3", "label": "t:options.h3" },
+        { "value": "h4", "label": "t:options.h4" },
+        { "value": "h5", "label": "t:options.h5" },
+        { "value": "h6", "label": "t:options.h6" }
       ],
       "default": "paragraph",
       "info": "t:info.edit_presets_in_theme_settings",
       "visible_if": "{{ block.settings.display_type == \"text\" }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.mailchimp_connection"
+    },
+    {
+      "type": "text",
+      "id": "mailchimp_action_url",
+      "label": "t:settings.mailchimp_action_url",
+      "default": "https://rollskater.us20.list-manage.com/subscribe/post?u=3592d9bc8bfc5f52df34b9db2&id=8fd810c98a",
+      "info": "t:info.mailchimp_action_url"
+    },
+    {
+      "type": "text",
+      "id": "mailchimp_bot_field_name",
+      "label": "t:settings.mailchimp_bot_field_name",
+      "default": "b_3592d9bc8bfc5f52df34b9db2_8fd810c98a"
+    },
+    {
+      "type": "text",
+      "id": "mailchimp_gdpr_field_id",
+      "label": "t:settings.mailchimp_gdpr_field_id",
+      "default": "61764"
+    },
+    {
+      "type": "text",
+      "id": "gdpr_consent_text",
+      "label": "t:settings.gdpr_consent_text",
+      "default": "Autorizzo il trattamento dei miei dati personali secondo la Privacy Policy."
+    },
+    {
+      "type": "text",
+      "id": "mailchimp_language_group_id",
+      "label": "t:settings.mailchimp_language_group_id",
+      "default": "237484"
+    },
+    {
+      "type": "text",
+      "id": "mailchimp_language_value",
+      "label": "t:settings.mailchimp_language_value",
+      "default": "1",
+      "info": "t:info.mailchimp_language_value"
     },
     {
       "type": "header",
@@ -703,7 +658,7 @@
   ],
   "presets": [
     {
-      "name": "t:names.email_signup",
+      "name": "t:names.newsletter_mailchimp",
       "category": "t:categories.forms"
     }
   ]

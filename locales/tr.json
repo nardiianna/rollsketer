@@ -16,6 +16,10 @@
       "placeholder": "E-posta adresi",
       "success": "Abone olduğunuz için teşekkür ederiz!"
     },
+    "newsletter_mailchimp": {
+      "label": "E-posta",
+      "placeholder": "E-posta adresi"
+    },
     "filter": "Filtrele",
     "payment_methods": "Ödeme yöntemleri",
     "contact_form": {

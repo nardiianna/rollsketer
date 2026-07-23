@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "newsletter_mailchimp": "Newsletter (Mailchimp)",
     "404": "404",
     "borders": "枠線",
     "collapsible_row": "折りたたみ可能な行",
@@ -200,6 +201,12 @@
     "layered_slideshow": "レイヤースライドショー"
   },
   "settings": {
+    "mailchimp_action_url": "Mailchimp form action URL",
+    "mailchimp_bot_field_name": "Mailchimp anti-spam field name",
+    "mailchimp_gdpr_field_id": "Mailchimp GDPR field ID",
+    "gdpr_consent_text": "Consent checkbox text",
+    "mailchimp_language_group_id": "Mailchimp language group ID",
+    "mailchimp_language_value": "Mailchimp language value",
     "alignment": "配置",
     "autoplay": "自動再生",
     "background": "背景",
@@ -866,6 +873,8 @@
     "icons": "アイコン"
   },
   "content": {
+    "mailchimp_connection": "Mailchimp connection",
+    "newsletter_mailchimp_intro": "Submits directly to a Mailchimp audience. Sign-ups are not added as Shopify customers.",
     "advanced": "高度な設定",
     "background_image": "背景画像",
     "background_video": "背景動画",
@@ -1077,6 +1086,8 @@
     "new_arrivals": "新着商品"
   },
   "info": {
+    "mailchimp_action_url": "Found in Mailchimp under Audience > Signup forms > Embedded form, as the form's \"action\" attribute",
+    "mailchimp_language_value": "Value of the language option to preselect, from the embedded form's group field",
     "video_alt_text": "支援技術のユーザーのために動画の説明を記述します",
     "video_autoplay": "動画はデフォルトでミュートになります",
     "video_external": "YouTubeまたはVimeoのURLを使用します",

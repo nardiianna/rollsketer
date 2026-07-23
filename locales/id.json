@@ -16,6 +16,10 @@
       "placeholder": "Alamat email",
       "success": "Terima kasih sudah berlangganan!"
     },
+    "newsletter_mailchimp": {
+      "label": "Email",
+      "placeholder": "Alamat email"
+    },
     "filter": "Filter",
     "payment_methods": "Metode pembayaran",
     "contact_form": {

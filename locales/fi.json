@@ -16,6 +16,10 @@
       "placeholder": "Sähköpostiosoite",
       "success": "Kiitos tilauksesta!"
     },
+    "newsletter_mailchimp": {
+      "label": "Sähköposti",
+      "placeholder": "Sähköpostiosoite"
+    },
     "filter": "Suodata",
     "payment_methods": "Maksutavat",
     "contact_form": {

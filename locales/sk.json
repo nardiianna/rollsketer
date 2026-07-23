@@ -16,6 +16,10 @@
       "placeholder": "E-mailová adresa",
       "success": "Ďakujeme, že ste sa prihlásili na odber správ."
     },
+    "newsletter_mailchimp": {
+      "label": "E-mail",
+      "placeholder": "E-mailová adresa"
+    },
     "filter": "Filtrovať",
     "payment_methods": "Spôsoby platby",
     "contact_form": {

@@ -16,6 +16,10 @@
       "placeholder": "Adresse e-mail",
       "success": "Merci de vous être abonné(e) !"
     },
+    "newsletter_mailchimp": {
+      "label": "E-mail",
+      "placeholder": "Adresse e-mail"
+    },
     "filter": "Filtrer",
     "payment_methods": "Moyens de paiement",
     "contact_form": {

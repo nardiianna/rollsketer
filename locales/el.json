@@ -16,6 +16,10 @@
       "placeholder": "Διεύθυνση email",
       "success": "Ευχαριστούμε για την εγγραφή!"
     },
+    "newsletter_mailchimp": {
+      "label": "Email",
+      "placeholder": "Διεύθυνση email"
+    },
     "filter": "Φιλτράρισμα",
     "payment_methods": "Μέθοδοι πληρωμής",
     "contact_form": {

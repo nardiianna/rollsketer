@@ -16,6 +16,10 @@
       "placeholder": "อีเมล",
       "success": "ขอขอบคุณที่สมัครรับข้อมูล"
     },
+    "newsletter_mailchimp": {
+      "label": "อีเมล",
+      "placeholder": "อีเมล"
+    },
     "filter": "ตัวกรอง",
     "payment_methods": "วิธีการชำระเงิน",
     "contact_form": {

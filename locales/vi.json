@@ -16,6 +16,10 @@
       "placeholder": "Địa chỉ email",
       "success": "Cảm ơn bạn đã đăng ký!"
     },
+    "newsletter_mailchimp": {
+      "label": "Email",
+      "placeholder": "Địa chỉ email"
+    },
     "filter": "Bộ lọc",
     "payment_methods": "Phương thức thanh toán",
     "contact_form": {

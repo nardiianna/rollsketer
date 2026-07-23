@@ -16,6 +16,10 @@
       "placeholder": "E-poštni naslov",
       "success": "Hvala za prijavo!"
     },
+    "newsletter_mailchimp": {
+      "label": "E-pošta",
+      "placeholder": "E-poštni naslov"
+    },
     "filter": "Filter",
     "payment_methods": "Načini plačila",
     "contact_form": {

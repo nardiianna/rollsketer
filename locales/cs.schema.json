@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "newsletter_mailchimp": "Newsletter (Mailchimp)",
     "404": "404",
     "borders": "Ohraničení",
     "collapsible_row": "Sbalitelný řádek",
@@ -200,6 +201,12 @@
     "layered_slideshow": "Vrstvená prezentace"
   },
   "settings": {
+    "mailchimp_action_url": "Mailchimp form action URL",
+    "mailchimp_bot_field_name": "Mailchimp anti-spam field name",
+    "mailchimp_gdpr_field_id": "Mailchimp GDPR field ID",
+    "gdpr_consent_text": "Consent checkbox text",
+    "mailchimp_language_group_id": "Mailchimp language group ID",
+    "mailchimp_language_value": "Mailchimp language value",
     "alignment": "Zarovnání",
     "autoplay": "Automatické přehrávání",
     "background": "Pozadí",
@@ -866,6 +873,8 @@
     "icons": "Ikony"
   },
   "content": {
+    "mailchimp_connection": "Mailchimp connection",
+    "newsletter_mailchimp_intro": "Submits directly to a Mailchimp audience. Sign-ups are not added as Shopify customers.",
     "advanced": "Pokročilé",
     "background_image": "Obrázek na pozadí",
     "background_video": "Video na pozadí",
@@ -1077,6 +1086,8 @@
     "new_arrivals": "Novinky"
   },
   "info": {
+    "mailchimp_action_url": "Found in Mailchimp under Audience > Signup forms > Embedded form, as the form's \"action\" attribute",
+    "mailchimp_language_value": "Value of the language option to preselect, from the embedded form's group field",
     "video_alt_text": "Popište video pro uživatele asistivních technologií",
     "video_autoplay": "Videa budou ve výchozím nastavení ztlumená",
     "video_external": "Použijte URL z YouTube nebo Vimeo",

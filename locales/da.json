@@ -16,6 +16,10 @@
       "placeholder": "Mailadresse",
       "success": "Tak for din tilmelding"
     },
+    "newsletter_mailchimp": {
+      "label": "Mail",
+      "placeholder": "Mailadresse"
+    },
     "filter": "Filtrer",
     "payment_methods": "Betalingsmetoder",
     "contact_form": {

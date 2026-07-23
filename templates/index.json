@@ -3468,7 +3468,7 @@
           "blocks": {}
         },
         "email_signup_DBGbMf": {
-          "type": "email-signup",
+          "type": "newsletter-mailchimp",
           "settings": {
             "width": "custom",
             "custom_width": 36,
@@ -3485,6 +3485,12 @@
             "label": "Sign up",
             "integrated_button": true,
             "button_type_preset": "paragraph",
+            "mailchimp_action_url": "https://rollskater.us20.list-manage.com/subscribe/post?u=3592d9bc8bfc5f52df34b9db2&id=8fd810c98a",
+            "mailchimp_bot_field_name": "b_3592d9bc8bfc5f52df34b9db2_8fd810c98a",
+            "mailchimp_gdpr_field_id": "61764",
+            "gdpr_consent_text": "Autorizzo il trattamento dei miei dati personali secondo la Privacy Policy.",
+            "mailchimp_language_group_id": "237484",
+            "mailchimp_language_value": "1",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,

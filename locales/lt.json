@@ -16,6 +16,10 @@
       "placeholder": "El. pašto adresas",
       "success": "Dėkojame, kad prenumeruojate!"
     },
+    "newsletter_mailchimp": {
+      "label": "El. paštas",
+      "placeholder": "El. pašto adresas"
+    },
     "filter": "Filtruoti",
     "payment_methods": "Mokėjimo būdai",
     "contact_form": {

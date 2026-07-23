@@ -16,6 +16,10 @@
       "placeholder": "E-postadresse",
       "success": "Takk for at du abonnerer!"
     },
+    "newsletter_mailchimp": {
+      "label": "E-post",
+      "placeholder": "E-postadresse"
+    },
     "filter": "Filter",
     "payment_methods": "Betalingsmåter",
     "contact_form": {

@@ -16,6 +16,10 @@
       "placeholder": "电子邮件地址",
       "success": "感谢您的订阅！"
     },
+    "newsletter_mailchimp": {
+      "label": "电子邮件",
+      "placeholder": "电子邮件地址"
+    },
     "filter": "筛选条件",
     "payment_methods": "付款方式",
     "contact_form": {

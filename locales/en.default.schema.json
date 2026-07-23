@@ -32,6 +32,8 @@
     "text": "Text"
   },
   "content": {
+    "mailchimp_connection": "Mailchimp connection",
+    "newsletter_mailchimp_intro": "Submits directly to a Mailchimp audience. Sign-ups are not added as Shopify customers.",
     "visible_if_collection_has_more_products": "Visible if collection has more products than shown",
     "advanced": "Advanced",
     "appearance": "Appearance",
@@ -211,6 +213,8 @@
     "work_quickly_to_ship": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>"
   },
   "info": {
+    "mailchimp_action_url": "Found in Mailchimp under Audience > Signup forms > Embedded form, as the form's \"action\" attribute",
+    "mailchimp_language_value": "Value of the language option to preselect, from the embedded form's group field",
     "actions_display_style": "Icons are always used on mobile",
     "applies_on_image_only": "Applies to images only",
     "aspect_ratio_adjusted": "Adjusted in some layouts",
@@ -236,6 +240,7 @@
     "media_type_info": "Features are populated from your menu links"
   },
   "names": {
+    "newsletter_mailchimp": "Newsletter (Mailchimp)",
     "column": "Column",
     "product_title": "Product title",
     "custom_liquid": "Custom Liquid",
@@ -749,6 +754,12 @@
     "below_media": "Below media"
   },
   "settings": {
+    "mailchimp_action_url": "Mailchimp form action URL",
+    "mailchimp_bot_field_name": "Mailchimp anti-spam field name",
+    "mailchimp_gdpr_field_id": "Mailchimp GDPR field ID",
+    "gdpr_consent_text": "Consent checkbox text",
+    "mailchimp_language_group_id": "Mailchimp language group ID",
+    "mailchimp_language_value": "Mailchimp language value",
     "accordion": "Accordion",
     "account": "Account",
     "actions_display_style": "Menu style",

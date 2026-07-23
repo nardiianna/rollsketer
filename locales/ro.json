@@ -16,6 +16,10 @@
       "placeholder": "Adresă de e-mail",
       "success": "Mulțumim pentru că te-ai abonat!"
     },
+    "newsletter_mailchimp": {
+      "label": "E-mail",
+      "placeholder": "Adresă de e-mail"
+    },
     "filter": "Filtrează",
     "contact_form": {
       "name": "Nume",

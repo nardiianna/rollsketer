@@ -16,6 +16,10 @@
       "placeholder": "Имейл адрес",
       "success": "Благодарим, че се абонирахте."
     },
+    "newsletter_mailchimp": {
+      "label": "Имейл",
+      "placeholder": "Имейл адрес"
+    },
     "filter": "Филтър",
     "payment_methods": "Начини на плащане",
     "contact_form": {

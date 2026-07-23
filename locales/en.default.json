@@ -122,6 +122,10 @@
       "placeholder": "Email address",
       "success": "Thanks for subscribing!"
     },
+    "newsletter_mailchimp": {
+      "label": "Email",
+      "placeholder": "Email address"
+    },
     "filter": "Filter",
     "load_video": "Load video: {{ description }}",
     "sold_out": "Sold out",
