@@ -1,0 +1,26 @@
+{% doc %}
+  Renders the collection H1. Appends the active vendor (brand) filter label to the
+  category title, matching the legacy TSC behaviour: "{CATEGORY} - {Brand}" when a
+  brand facet is active on top of a category collection.
+
+  @param {object} [closest.collection] - The current collection, via `closest`.
+{% enddoc %}
+
+{%- liquid
+  assign heading = closest.collection.title | upcase
+  assign brand_label = blank
+
+  for filter in closest.collection.filters
+    if filter.param_name == 'filter.p.vendor'
+      for value in filter.active_values
+        assign brand_label = value.label
+      endfor
+    endif
+  endfor
+
+  if brand_label != blank
+    assign heading = heading | append: ' - ' | append: brand_label
+  endif
+-%}
+
+<h1>{{ heading }}</h1>

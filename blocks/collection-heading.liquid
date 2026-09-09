@@ -1,0 +1,15 @@
+{% doc %}
+  Renders the collection H1. Appends the active vendor (brand) filter label to the
+  category title, matching the legacy TSC behaviour: "{CATEGORY} - {Brand}" when a
+  brand facet is active on top of a category collection.
+{% enddoc %}
+
+{% render 'collection-h1' %}
+
+{% schema %}
+{
+  "name": "t:names.heading",
+  "tag": null,
+  "settings": []
+}
+{% endschema %}

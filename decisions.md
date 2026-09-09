@@ -48,6 +48,33 @@ Copia questo blocco per iniziare una nuova entry. Sostituisci i placeholder. For
 
 <!-- Le entry più nuove vanno direttamente sotto questa riga -->
 
+## 2026-09-09 — Blocco custom `collection-heading` per l'H1 con concatenazione categoria+brand
+
+**Stato:** Accettata
+
+**Decisione:** L'H1 di `templates/collection.json` non usa più il blocco generico `text` (richtext), ma un nuovo blocco custom `blocks/collection-heading.liquid` che renderizza `snippets/collection-h1.liquid`. Lo snippet costruisce l'H1 come `{{ collection.title | upcase }}` e, se è attivo un filtro vendor (`filter.p.vendor`), aggiunge ` - {{ nome brand }}`.
+
+**Contesto:** Migrazione SEO dal vecchio sito TSC/Storeden (rollskater.com) a Shopify per il cliente Roll Skater. Su TSC, le pagine categoria+brand combinate mostravano un H1 tipo "PATTINAGGIO A ROTELLE - Edea"; su Shopify l'H1 era hardcoded come `<h1>{{ closest.collection.title }}</h1>` dentro il setting `text` (richtext) del blocco generico, senza reagire ai filtri.
+
+**Alternative considerate:**
+- **Scrivere Liquid con `{% render %}` direttamente nel setting `text` del blocco `text` esistente** — Rifiutata: Shopify blocca in fase di push i tag Liquid (`{%`, `{{`) nei setting di tipo `richtext` che non siano "dynamic source" riconosciute, quindi il push falliva con errore.
+- **Nuovo blocco custom dedicato** — Accettata: un blocco `.liquid` proprio non ha questa restrizione e può contenere logica Liquid piena.
+
+**Razionale:** Il blocco custom è l'unico modo, in un tema Online Store 2.0 con blocchi generici "text" a richtext ristretto, di far dipendere l'H1 dallo stato dei filtri di collezione (`collection.filters` / `active_values`), mantenendo comunque la struttura a blocchi richiesta (CLAUDE.md §5, Sections Everywhere / block-based).
+
+**Conseguenze:**
+- ✅ Parità SEO con il vecchio sito TSC sulle pagine categoria+brand filtrate
+- ✅ Nessuna stringa hardcoded nel blocco: la logica sta nello snippet, il testo visibile deriva da `collection.title` e dall'etichetta del filtro attivo
+- ⚠ Il blocco "Title" nell'editor tema perde i controlli di stile del blocco `text` generico (font, colore, ecc.) — ora è un H1 fisso, non personalizzabile da editor
+- ⚠ Se in futuro serve concatenare anche altri filtri (non solo vendor) oltre a categoria+brand, lo snippet va esteso
+
+**Riferimenti:**
+- CLAUDE.md §5 (Sections Everywhere, block-based)
+- CLAUDE.md §6.1 (LiquidDoc su ogni snippet/sezione)
+- `blocks/collection-heading.liquid`, `snippets/collection-h1.liquid`, `templates/collection.json`
+
+---
+
 ## 2026-01-15 — Usare Embla invece di Splide per le sezioni carousel (ENTRY ESEMPIO)
 
 **Stato:** Accettata
